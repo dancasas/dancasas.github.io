@@ -1,0 +1,189 @@
+/* GENERAL */
+* {
+	outline: none !important;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	/*font-weight: 300;*/
+	/*padding-top: 70px;*/
+	height:100%;
+	font-size: 15px;
+	/* Fons gris */
+	background-color: #DEDEDE;
+}
+
+/* Amplada maxima de tot el cos. Falta solucionar una cosa, pero casi ho tenim */
+.container-fluid {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1280px;
+}
+
+.imgdan {
+	float:left;
+	width: 90px;
+	margin-right: 10px;
+}
+
+/* Aixo ho he fet per que el contingut sino es solapa amb la barra */
+#top {
+	padding-top: 70px;
+}
+
+/* Classe que dona color al cos de la web (fons blanc) */
+.cos {
+	background-color: white;
+}
+
+p {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+a {
+	color: #3c763d;
+}
+
+h3 {
+	font-weight: bold;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #2b542c;
+}
+
+table, table tr {
+	font-size: 15px;
+	/*font-weight: 200;*/
+	vertical-align: top;
+	border: none !important;
+	line-height: 20px;
+}
+/* FI GENERAL */
+
+/* NAVBAR */
+/* Li dono aquest marge per baix per que la imatge la vaig fer jo i no queda alineat, patilla */
+.linkedin {
+	margin-bottom: -1px;
+}
+
+.navbar-inverse {
+	background-color: #333;
+}
+
+.nav-social {
+	margin-left:5px;
+	padding-top: 13px;
+	width: 25px;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; 
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+}
+
+.nav-social:hover {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+.navbar-brand, .navbar-inverse .navbar-brand {
+	padding-left: 10px;
+	font-size: 24px;
+	font-weight: 200;
+	color: #AAA;
+}
+
+.navbar-nav > li > a {
+	padding-top: 17px;
+	padding-bottom: 13px;
+	font-size: 17px;
+	font-weight: 200;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: #AAA;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover {
+	background-color: transparent;
+}
+
+.navbar-toggle {
+	border: 1px solid #444 !important;
+}
+
+.navbar-toggle:hover {
+	background-color: #444 !important;
+}
+
+/* Arreglos per pantalles de mobil */
+@media (max-width: 767px) {
+	.navbar-brand {
+		padding-left: 15px;
+	}
+
+	.social-icons {
+		float: left !important;
+		text-align: center;
+	}
+
+	.social-icons {
+		margin-right: 15px;
+		margin-left: -10px;
+	}
+
+	.social-icons img {
+		margin-top: 0px;
+		margin-bottom: 15px;
+		width: 25px;
+	}
+}
+/* FI NAVBAR */
+
+/* RESEARCH */
+.imgres {
+	margin-right: 10px;
+}
+
+.btn-group {
+	margin-top: 7px;
+}
+
+.btn-group .btn-success {
+	color: #468847;
+	background-color: rgba(223,240,216,0.3);
+	border: 1px solid #d6e9c6;
+}
+
+.btn-group .btn-success:hover {
+	background-color: rgba(207,232,196,1);
+}
+/* FI RESEARCH
+
+/* AJUSTEM MIDES SEGONS RESOLUCIO */
+@media (max-width: 767px) {
+	/* Al haver de posar container-fluid al navbar per fixar una mida maxima d'ample m'apareixia un padding extra al arriba a aquesta mida.
+	.navbar .container-fluid {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

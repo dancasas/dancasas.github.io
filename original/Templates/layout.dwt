@@ -1,0 +1,45 @@
+<html>
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>my bio</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="Enter, Keywords, Here">
+<meta name="description" content="Enter a brief description here">
+<link href="../styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body link="#000066" vlink="#FFFFCC" alink="#000099">
+<table width="586" border="0" cellspacing="0" cellpadding="0" align="center" class="revtext">
+  <tr> 
+    <td colspan="3"><div align="right"><!-- TemplateBeginEditable name="name" -->Joe Smith, Hot Shot<!-- TemplateEndEditable --></div></td>
+  </tr>
+  <tr> 
+    <td width="30" rowspan="3" valign="top"><img src="../images/nav/space.gif" border="0" alt="spacer" width="30" height="12"></td>
+    <td colspan="2"> 
+      <div align="right"><img src="../images/logo.gif" width="352" height="60"></div>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" colspan="2"><img src="../images/nav/space.gif" border="0" alt="spacer" width="13" height="10"></td>
+  </tr>
+  <tr> 
+    <td valign="top" align="center" width="180"><!-- #BeginEditable "column%201" --> 
+      <p align="center"><img src="../images/lgimage.gif" width="167" height="197" alt="image" border="0"></p>
+      <!-- #EndEditable --></td>
+    <td width="390" align="left" valign="top"><!-- #BeginEditable "Column%202" --> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Content</font></p>
+      <p align="center">&nbsp;</p>
+      <!-- #EndEditable --></td>
+  </tr>
+  <tr> 
+    <td colspan="3"> 
+      <div align="center"><!-- #BeginLibraryItem "/Library/bottnav.lbi" --><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="../index.html"><font size="1">bio</font></a><font size="1"> 
+          | <a href="../publications.html">publications</a> | <a href="../photo.html">photos</a></font><br>
+          </font><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#999900">copyright 
+          information here</font><!-- #EndLibraryItem --></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
