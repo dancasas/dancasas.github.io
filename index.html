@@ -1,0 +1,357 @@
+<html>
+<head><meta charset="utf-8">
+	<title>Dan Casas</title>
+	<meta name="title" content="Dan Casas" />
+	<meta name="description" content="Dan Casas" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" id="favicon" href="favicon.png"> 
+	<meta name="author" content="Dan Casas">
+
+	<!-- JAVASCRIPT -->	
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/css.css">
+
+	<!-- Docs Bootstrap: getbootstrap.com -->
+</head>
+<!-- Els atributs del bodi son per que el menu reflexi el lloc on estas mentre fas scroll. El offset coincideix amb el padding-top del body -->
+<body id="dan" data-spy="scroll" data-target="#menu" data-offset="70">
+	<!-- MENU SUPERIOR -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<!-- navbar-header es pel nom de la web (Dan Casas) i el menu per mobil -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#dan">Dan Casas</a>
+				</div>
+				<!-- La classe collapse es per convertir el menu en el boto per mobil -->
+				<div class="collapse navbar-collapse" id="menu">
+					<ul class="nav navbar-nav navbar-left">
+						<li><a href="#bio">Bio</a></li>
+						<li><a href="#research">Research</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+					<!-- pull-right ho enxufa a la dreta -->
+					<div class="social-icons pull-right">
+						<a href="https://www.linkedin.com/in/dancasas" target="_blank"><img class="nav-social linkedin" src="img/in_nav.png" /></a>
+						<a href="http://www.instagram.com/dancg" target="_blank"><img class="nav-social" src="img/ig_nav.png" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Les ID son per cada seccio, per que fagi scroll al fer click al menu, vindrien a ser links -->
+	<section id="bio">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" id="top">
+				<h3>Biography</h3>
+				<!-- Si poses els blocs de text sempre entre el tag <p></p> queda com amb un espai per dalt i baix perfecte per llegir-lo -->
+				<p>
+					<b>Postdoctoral Research Associate</b><br>
+					<small><i>University of Southern California - Institute for Creative Technologies</i></small><br><br>
+					<img class="imgdan" src="img/dan.jpg" />
+					Dan Casas received his M.Sc. degree from the Autonomous University of Barcelona (Spain) in 2009. In 2008, during the last year of his M.Sc. studies, he joined the Human Sensing Lab at Carnegie Mellon University (PA, USA) as an invited research scholar, where he investigated methods for real-time face tracking, advised by <a href="http://www.cs.cmu.edu/~ftorre/">Prof. Fernando de la Torre</a>. In 2014, Dan received his PhD in Computer Graphics from the University of Surrey (UK), supervised by Prof. Adrian Hilton. Dan's dissertation introduced novel methods for character animation from multi-camera capture that allow the synthesis of video-realistic interactive 3D characters. Soon after graduating, Dan joined the USC Institute for Creative Technologies as a postdoc in the Character Animation and Simulation group led by <a href="http://www.arishapiro.com/">Dr. Ari Shapiro</a>.
+				</p>
+				<!-- Barra horitzontal -->
+				<hr>
+			</div>
+		</div>
+	</section>
+
+	<section id="research">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Research</h3>
+				<p>
+					My research interests include Computer Vision, Computer Graphics and Animation, mainly releated with human motion reconstruction and synthesis. I am particularly interested in reusing video data from multi-camera capture to synthesize novel video-realistic sequences. 
+				</p>
+				<!-- IMPORTANT: Fixa't que la taula te la classe "table-responsive". Aixo es per que s'adapti a les resolucions de pantalla sense haver de donar una mida per les columnes (td) -->
+				<h4>Book Chapters</h4>
+				<!-- table-responsive crear taules responsives, per la xapuza que m'has fet fer -->
+				<table class="table-responsive">
+					<tr>
+						<td>
+							<a href="#">
+								<img class="imgres" src="img/casas_book15_s.png" />
+							</a>
+						</td>
+						<td>
+							<a href="docs/casas_RWVC2015.pdf">Video-Based Character Animation</a><br>
+							<a href="http://ict.usc.edu/~casas">Dan Casas</a>, Peng Huang and <a href="http://personal.ee.surrey.ac.uk/Personal/A.Hilton/">Adrian Hilton</a><br>
+							in Marcus Magnor, Oliver Grau, Olga Sorkine-Hornung and Christian Theobalt (Eds.): <i>Digital Representations of the Real World: How to Capture, Model, and Render Visual Reality</i><br>
+							ISBN 9781482243819, pp. 239–252, CRC Press, 2015.<br>
+							<!-- btn-group es per crear els grups de botons. La mida la marca la classe del btn-group en aquest cas, i no cal especificar-la al boto concret -->
+							<span class="btn-group btn-group-xs">
+								<a class="btn btn-success" target="_blank" href="docs/casas_RWVC2015.pdf">pdf</a>
+								<a class="btn btn-success" target="_blank" href="docs/casas_RWVC2015.bib">bib</a>
+								<a class="btn btn-success" target="_blank" href="http://www.crcpress.com/product/isbn/9781482243819">CRC Press</a>
+								<!--<a class="btn btn-success" target="_blank" href="docs/volino_BMVC14.bib">bib</a>-->
+								<!--<a class="btn btn-success" target="_blank" href="#">web</a>-->
+								<!--<a class="btn btn-success" target="_blank" href="#">data</a>-->
+							</span>
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<h4>Journals and Conferences</h4>
+				<!-- table-responsive crear taules responsives, per la xapuza que m'has fet fer -->
+				<table class="table-responsive">
+					<tr>
+						<td>
+							<a href="#">
+								<img class="imgres" src="img/volino_BMVC14_s.png" />
+							</a>
+						</td>
+						<td>
+							Optimal Representation of Multiple-View Video<br>
+							<a href="http://marco.volino.co.uk/">Marco Volino</a>, <a href="http://ict.usc.edu/~casas">Dan Casas</a>, <a href="http://www.collomosse.com">John Collomosse</a> and <a href="http://personal.ee.surrey.ac.uk/Personal/A.Hilton/">Adrian Hilton</a><br>
+							<i>British Machine Vision Conference, BMVC 2014</i> (Oral)<br>
+							<!-- btn-group es per crear els grups de botons. La mida la marca la classe del btn-group en aquest cas, i no cal especificar-la al boto concret -->
+							<span class="btn-group btn-group-xs">
+								<a class="btn btn-success" target="_blank" href="docs/volino_BMVC14.pdf">preprint</a>
+								<a class="btn btn-success" target="_blank" href="docs/volino_BMVC14.bib">bib</a>
+								<a class="btn btn-success" target="_blank" href="http://www.bmva.org/bmvc/2014/papers/paper009/index.html">BMVA</a>
+								<!--<a class="btn btn-success" target="_blank" href="#">web</a>-->
+								<!--<a class="btn btn-success" target="_blank" href="#">data</a>-->
+							</span>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<table class="table-responsive">
+					<tr>
+						<td>
+							<a href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/docs/casas_EUROGRAPHICS2014.pdf">
+								<img class="imgres" src="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/images/casas_EUROGRAPHICS2014_s.png" />
+							</a>
+						</td>
+						<td>
+							4D Video Textures for Interactive Character Appearance<br/>
+							<a href="http://ict.usc.edu/~casas">Dan Casas</a>, Marco Volino, <a href="http://www.collomosse.com">John Collomosse</a> and <a href="http://personal.ee.surrey.ac.uk/Personal/A.Hilton/">Adrian Hilton</a>.<br/>
+							<i>EUROGRAPHICS, 2014</i>.<br/>
+							<span class="btn-group btn-group-xs">
+								<a class="btn btn-success" target="_blank" href="docs/casas_EUROGRAPHICS2014.pdf">pdf</a>
+								<a class="btn btn-success" target="_blank" href="docs/casas_EUROGRAPHICS2014.bib">bib</a>
+								<a class="btn btn-success" target="_blank" href="http://www.cvssp.org/projects/4d/4DVT/">web</a>
+								<a class="btn btn-success" target="_blank" href="http://www.cvssp.org/projects/4d/4DVT/#data">data</a>
+							</span>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<table class="table-responsive">
+					<tr>
+						<td>
+							<a href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/docs/tejera2013cybernetics.pdf">
+								<img class="imgres" src="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/images/tejera_IEEESMCB_s.png" />
+							</a>
+						</td>
+						<td>
+							Animation Control of Surface Motion Capture<br/>
+							Margara Tejera, <a href="http://ict.usc.edu/~casas">Dan Casas</a>, and <a href="http://personal.ee.surrey.ac.uk/Personal/A.Hilton/">Adrian Hilton</a>.<br/>
+							<i>IEEE Transactions on Cybernetics, 2013.</i><br/>
+							Vol 43, no. 6, pp. 1532-1545, 2013<br/>
+							<span class="btn-group btn-group-xs">
+								<a class="btn btn-success" target="_blank" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6547685">IEEE</a>
+								<a class="btn btn-success" target="_blank" href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/docs/tejera2013cybernetics.pdf">pdf</a>
+								<a class="btn btn-success" target="_blank" href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/docs/tejera2013cybernetics.bib">bib</a>
+							</span>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<table class="table-responsive">
+					<tr>
+						<td>
+							<a href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/docs/casas_TVCG2012.pdf">
+								<img class="imgres" src="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/images/casas_TVCG2012_s.png" />
+							</a>
+						</td>
+						<td>
+							Interactive Animation of 4D Performance Capture<br/>
+							<a href="http://ict.usc.edu/~casas">Dan Casas</a>, Margara Tejera, <a href="http://personal.ee.surrey.ac.uk/Personal/J.Guillemaut/">Jean-Yves Guillemaut</a> and <a href="http://personal.ee.surrey.ac.uk/Personal/A.Hilton/">Adrian Hilton</a>.<br/>
+							<i>IEEE Transactions on Visualization and Computer Graphics (TVCG), 2013.</i><br/>
+							<!--Vol. 19, no. 5, pp. 762–773, 2013.<br/>-->
+							<span class="btn-group btn-group-xs">
+								<a class="btn btn-success" target="_blank" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6365634">IEEE</a>
+								<a class="btn btn-success" target="_blank" href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/docs/casas_TVCG2012.pdf">pdf</a>
+								<a class="btn btn-success" target="_blank" href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/docs/casas_TVCG2012.bib">bib</a>
+							</span>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<table class="table-responsive">
+					<tr>
+						<td>
+							<a href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/casas_I3D2012.php">
+								<img class="imgres" src="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/images/casas_I3D2012_s.png" />
+							</a>
+						</td>
+						<td>
+							4D Parametric Motion Graphs for Interactive Animation<br/>
+							<a href="http://ict.usc.edu/~casas">Dan Casas</a>, Margara Tejera, <a href="http://personal.ee.surrey.ac.uk/Personal/J.Guillemaut/">Jean-Yves Guillemaut</a> and <a href="http://personal.ee.surrey.ac.uk/Personal/A.Hilton/">Adrian Hilton</a>.<br/>
+							<i>ACM/SIGGRAPH Symp. on Interactive 3D Graphics and Games (I3D), 2012.</i><br/>
+							<b>Honorable Mention for the Best Paper Award</b><br/>
+							<span class="btn-group btn-group-xs">
+								<a class="btn btn-success" target="_blank" class="btn btn-success" href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/casas_I3D2012.php">web</a>
+								<a class="btn btn-success" target="_blank" href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/docs/casas_I3D2012.pdf" onClick="javascript: _gaq.push(['_trackPageview', '/papers/casasI3D2012']);" >pdf</a>
+								<a class="btn btn-success" target="_blank" href="http://vimeo.com/33399136">video</a>
+								<a class="btn btn-success" target="_blank" href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/docs/casas_I3D2012.bib">bib</a>
+							</span>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<table class="table-responsive">
+					<tr>
+						<td>
+							<a href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/casas_MIG2011.php">
+								<img class="imgres" src="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/images/casas_MIG2011_s.png" />
+							</a>
+						</td>
+						<td>
+							Parametric Control of Captured Mesh Sequences for Real-Time Animation<br/>
+							<a href="http://ict.usc.edu/~casas">Dan Casas</a>, Margara Tejera, <a href="http://personal.ee.surrey.ac.uk/Personal/J.Guillemaut/">Jean-Yves Guillemaut</a> and <a href="http://personal.ee.surrey.ac.uk/Personal/A.Hilton/">Adrian Hilton</a>.<br/>
+							<a href="http://www.motioningames.org/archive/2011/MIG_2011.html">Motion in Games, 2011</a>.<br/> <i>Springer Lecture Notes in Computer Science 7060, 242–253, 2011.</i> <br/>
+							<span class="btn-group btn-group-xs">
+								<a class="btn btn-success" target="_blank" href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/casas_MIG2011.php">web</a>
+								<a class="btn btn-success" target="_blank" href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/docs/casas_MIG2011.pdf" onClick="javascript: _gaq.push(['_trackPageview', '/papers/casasMIG2011']);">pdf</a>
+								<a class="btn btn-success" href="http://vimeo.com/28291052">video</a>
+							</span>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<h4>Short Papers</h4>
+				<table class="table-responsive">
+					<tr>
+						<td>
+							<a href="docs/casas_I3D2015.pdf">
+								<img class="imgres" src="img/casas_I3D15_s.png" />
+							</a>
+						</td>
+						<td>
+							<a href="docs/casas_I3D2015.pdf">Rapid Photorealistic Blendshapes from Commodity RGB-D Sensors</a/><br/>
+							<a href="http://ict.usc.edu/~casas">Dan Casas</a>, Oleg Alexander, Andrew W. Feng, Graham Fyffe, Ryosuke Ichikari, Paul Debevec, Rhuizhe Wang, Evan Suma, Ari Shapiro.<br/>
+							<i>ACM/SIGGRAPH Symp. on Interactive 3D Graphics and Games (I3D), 2015.</i><br/>
+							<b>Best Poster Award</b><br/>
+							<span class="btn-group btn-group-xs">
+								<a class="btn btn-success" target="_blank" href="docs/casas_I3D2015.pdf">pdf</a>
+								<a class="btn btn-success" target="_blank" href="docs/casas_I3D2015_award.pdf">award</a>
+								<a class="btn btn-success" target="_blank" href="http://dl.acm.org/citation.cfm?id=2721398">ACM</a>
+							</span>
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<h4>PhD Thesis</h4>
+				<table class="table-responsive">
+					<tr>
+						<td>
+							<a href="docs/DanCasas_thesis.pdf">
+								<img class="imgres" src="img/casas_thesis.png" />
+							</a>
+						</td>
+						<td>
+							Dan Casas<br/>
+							Interactive Video-Realistic Character Animation from 4D Performance Capture<br/>
+							November 2013<br/>
+							Advisor:  <a href="http://personal.ee.surrey.ac.uk/Personal/A.Hilton/">Prof. Adrian Hilton.</a><br/>
+							University of Surrey<br/>
+							<span class="btn-group btn-group-xs">
+								<a class="btn btn-success" target="_blank" href="docs/DanCasas_thesis.pdf">pdf</a>
+								<a class="btn btn-success" target="_blank" href="https://www.youtube.com/watch?v=jz5xnX6u8xY">video</a>
+							</span>
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<!-- Barra horitzontal -->
+				<h4>Master's Thesis</h4>
+				<table class="table-responsive">
+					<tr>
+						<td>
+							<a href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/docs/pfc.pdf">
+								<img class="imgres" src="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/images/masterThesis_s.png" />
+							</a>
+						</td>
+						<td>
+							Dan Casas<br/>
+							Real-Time Face Tracking Methods<br/>
+							June 2009<br/>
+							Advisor:  <a href="http://www.cs.cmu.edu/~ftorre/">Dr. Fernando de la Torre.</a><br/>
+							Universitat Autònoma de Barcelona - Carnegie Mellon University<br/>
+							<span class="btn-group btn-group-xs">
+								<a class="btn btn-success" target="_blank" href="http://personal.ee.surrey.ac.uk/Personal/D.Casasguix/docs/pfc.pdf">pdf</a>
+								<a class="btn btn-success" target="_blank" href="https://vimeo.com/11159206">video</a>
+							</span>
+						</td>
+					</tr>
+				</table>
+				<!-- Barra horitzontal -->
+				<hr>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Contact</h3>
+				<h4>Postal address</h4>
+				<p>
+					Dan Casas Guix<br/>
+					USC Institute for Creative Technologies<br>
+					12015 E Waterfront Dr<br>
+					Los Angeles, CA 90094<br>
+					United States
+				</p>
+				
+				<h4>Internet</h4>
+				<i class="glyphicon glyphicon-envelope"></i> <a href="mailto:dan.casas@gmail.com" target="_blank"> dan.casas@gmail.com</a><br>
+				<i class="glyphicon glyphicon-envelope"></i> <a href="mailto:casas@ict.usc.edu" target="_blank"> casas@ict.usc.edu</a><br>
+				<i class="glyphicon glyphicon-globe"></i> <a target="_blank" href="http://www.dancasas.com"> dancasas.com</a><br>
+				<i class="glyphicon glyphicon-globe"></i> <a target="_blank" href="https://www.linkedin.com/in/dancasas"> linkedin.com/in/dancasas</a><br>
+				<i class=""></i><br>
+
+				<h4>Map</h4>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.3665231726445!2d-118.40420719999999!3d33.98311820000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b0a6204000a9%3A0x94bbf83f1608cbe8!2s12015+E+Waterfront+Dr%2C+Los+Angeles%2C+CA+90094!5e0!3m2!1sen!2sus!4v1410931213032" width="100%" height="300" frameborder="0" style="border:0"></iframe>
+				<!-- Barra horitzontal -->
+				<hr>
+			</div>
+		</div>
+	</section>
+
+	<section id="footer">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<center>
+					<small><i>Dan Casas 2014</i></small><br>
+					<small><a target="_blank" href="http://aumeli.cat">aumeli.cat</a><small>
+				</center>
+				<br>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
+<script type="text/javascript">    
+    /* SCROLL ALS LINKS */
+    $('#menu .navbar-left li a, .navbar-brand').bind('click', function(e) {
+        e.preventDefault(); // Deshabilitat la acció per defecte (que és anar al link directament, i aixi hi anem fent scroll molon)
+        $('html,body').animate({scrollTop: $(this.hash).offset().top - 70}, 'slow');                                                         
+    });
+</script>
