@@ -13,7 +13,9 @@ body {
 	height:100%;
 	font-size: 15px;
 	/* Fons gris */
-	background-color: #DEDEDE;
+	/*background-color: #DEDEDE;*/
+	background-color: #FFFFFF;
+	
 }
 
 /* Amplada maxima de tot el cos. Falta solucionar una cosa, pero casi ho tenim */
