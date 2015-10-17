@@ -160,12 +160,12 @@ table, table tr {
 
 .btn-group .btn-success {
 	color: #468847;
-	/*background-color: rgba(223,240,216,0.3);*/
-	/*border: 1px solid #d6e9c6;*/
+	background-color: rgba(223,240,216,0.3);
+	border: 1px solid #d6e9c6;
 }
 
 .btn-group .btn-success:hover {
-	/*background-color: rgba(207,232,196,1);*/
+	background-color: rgba(207,232,196,1);
 }
 /* FI RESEARCH */
 
