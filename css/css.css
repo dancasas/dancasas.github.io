@@ -172,7 +172,7 @@ table, table tr {
 
 /* AJUSTEM MIDES SEGONS RESOLUCIO */
 @media (max-width: 767px) {
-	/* Al haver de posar container-fluid al navbar per fixar una mida maxima d'ample m'apareixia un padding extra al arriba a aquesta mida.
+/* Al haver de posar container-fluid al navbar per fixar una mida maxima d'ample m'apareixia un padding extra al arriba a aquesta mida.*/
 	.navbar .container-fluid {
 		padding-right: 0px;
 		padding-left: 0px;
