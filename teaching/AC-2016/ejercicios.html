@@ -27,7 +27,9 @@
                     1.2 — <a href="docs/1.2-Movimiento-a-traves-de-una-curva-v2016.pdf">Movimiento a través de una curva </a><br/>
                     1.3 — <a href="docs/1.3-Sistemas-Keyframe.pdf">Sistemas keyframe </a><br/><br/>
                     2.1 — <a href="docs/2.1-Cinematica-directa-v2016.pdf">Cinemática directa</a><br/>
-                    2.2 — <a href="docs/2.2-Cinematica-inversa-v2016.pdf">Cinemática inversa</a><br/>
+                    2.2 — <a href="docs/2.2-Cinematica-inversa-v2016.pdf">Cinemática inversa</a><br/><br/>
+                    3.1 — <a href="docs/3.1-Caminar-v2016.pdf">Caminar</a><br/>
+                    3.2 — <a href="docs/3.2-Animacion-facial-v2016.pdf">Animación Facial</a><br/><br/>
                 </div>
             <div class="section head">
                 <h1>Tema 1.1 — Interpolación</h1>
@@ -258,6 +260,7 @@ end
                 <h2>Ejercicio 2.1.1</h2>
                 <p>
 Desarrolla la función <code>plot_skeleton(skeleton, rots) </code>en MATLAB que dibuje mediante la técnica de Cinemática Directa la estructura jerárquica inicializada a continuación.
+            </p>
 <pre class="matlab-code">
 function skeleton_demo()
     close all;
@@ -325,10 +328,9 @@ function plot_skeleton(skeleton, rots)
 
 end
 </pre>
-            </p>
             <h2>Ejercicio 2.1.2</h2>
             <p>
-            Cambia los valores de los parámetros del vector <code>rots</code> y observa como cambia la posición de la cadena. Consigue articulaciones parecidas a estas: <a href="images/2_1_2/0.png"/>ejemplo1</a>, <a href="images/2_1_2/1.png"/>ejemplo2</a>, <a href="images/2_1_2/2.png"/>ejemplo3</a>, <a href="images/2_1_2/3.png"/>ejemplo4</a>. Asegúrate de entender cómo afectan los cambios de cada uno de los parámetros en el estado final de la cadena.
+            Cambia los valores de los parámetros del vector <code>rots</code> y observa como cambia la posición de la cadena. Consigue articulaciones parecidas a estas: <a href="images/2_1_2/0.png">ejemplo1</a>, <a href="images/2_1_2/1.png">ejemplo2</a>, <a href="images/2_1_2/2.png">ejemplo3</a>, <a href="images/2_1_2/3.png">ejemplo4</a>. Asegúrate de entender cómo afectan los cambios de cada uno de los parámetros en el estado final de la cadena.
             </p>
             <h2>Ejercicio 2.1.3</h2>
             <p>
@@ -337,7 +339,7 @@ end
             </div>
 
             <div class="section head">
-                <h1>Tema 2.1 — Cinemática inversa</h1>
+                <h1>Tema 2.2 — Cinemática inversa</h1>
                 
                 <div class="authors">
                     Ejercicios
@@ -378,19 +380,134 @@ while(error(current_position, target) > 0.1)
     rots(3) = rots(3) + update(3);
 end
 </pre>
-</p>
             </div>
- <!--
-<div class="section acknowledgments">
-<h2>Acknowledgments</h2>
-  -->
-<div class="section">
-<hr class="smooth">
-Animación por Computador, 2016 — Dan Casas
-</div>
-</div>
-</div>
+            <div class="section head">
+                <h1>Tema 3.1 — Caminar</h1>
+                
+                <div class="authors">
+                    Ejercicios
+                </div>
+                
+                <div class="affiliations">
+                </div>
+                            
+                <div class="venue"></div>
+                
+            </div>
+            <div class="section abstract" >
+                <h2>Ejercicio 3.1.1</h2>
+                <p>
+                    Descárgate <a href="images/3_1_1/dummy.bvh">este archivo BVH</a> que contiene el esqueleto báisco. Importalo a Blender. Edítalo con un editor de texto para crear alguna animación sencilla, por ejemplo:
+                </p>
+                <ol>
+                    <li>Añade un movimiento translacional al nodo root durante 10 frames.</li>
+                    <li>Añade un movimiento rotacional en alguno de sus articulaciones durante 10 frames.</li>
+                    <li>Añade un eslabón nuevo a su cuerpo en reposo, con 2 DOFs.</li>
+                </ol>
+                <p>
+                    <a href="images/3_1_1/ex1.gif">Aquí</a> tienes una sencilla animación de lo que tienes que conseguir.
+                </p>
+                <h2>Ejercicio 3.1.2</h2>
+                <p>
+                Edita el archivo del ejercicio anterior, y cambia las línias del tipo <code>CHANNELS 3 Xrotation Yrotation Zrotation</code> por <code>CHANNELS 3 Zrotation Xrotation Yrotation</code>. ¿Puedes adivinar qué es lo que estás cambiando? ¿Qué consecuencuas tiene en la animación resultante? 
+                </p>         
+                <h2>Ejercicio 3.1.3</h2>
+                <p>
+                    Descárgate <a href="images/3_1_3/human-motion-start.blend">esta escena de Blender</a> y fíjate en las curvas de valores cómo la translación y la rotación de la pelvis (nodo root). Debería parecerse a <a href="images/3_1_3/curvas-rotacion-pelvis.png">esto</a>, que coincide con los gráficos correspondientes a la acción de caminar como hemos visto en clase. Intenta modificar las curvas en el Editor de Curvas de Blender, y observa cómo cambia la animación.
+                </p> 
+            </div>
+            
+            <div class="section head">
+                <h1>Tema 3.2 — Animación Facial</h1>
+                
+                <div class="authors">
+                    Ejercicios
+                </div>
+                
+                <div class="affiliations">
+                </div>
+                            
+                <div class="venue"></div>
+                
+            </div>
+            <div class="section abstract" >
+                <h2>Ejercicio 3.2.1</h2>
+                <p>
+                Descárgate <a href="https://www.dropbox.com/s/k7ubi8snpqeh39y/blendshapes.zip?dl=1">este zip</a> que contiene un set de <i>blendshapes</i>, descomprimelo y guárdalas en un directorio. Descárgate también la función para dibujar mallas en format OBJ <code><a href="images/3_2_1/read_vertices_and_faces_from_obj_file.m">read_vertices_and_faces_from_obj_file.m</a></code>.</p>
+                <p>Acaba de implementar la función <code>compute_global_blendshapes()</code>, para que interpole entre 2 mallas utilizado el método de blendshape global que hemos visto en clase.</p>
+<pre class="matlab-code">
+%% Looping global blendshape from alpha 0 to 1 to 0
+function compute_global_blendshapes()
+    close all
+    
+    % Read OBJ files
+    [V00,F] = read_vertices_and_faces_from_obj_file(PATH); %Substituir PATH por ruta al obj
+    
+    % ¡¡¡¡¡Leer más OBJ aquí!!!!
+    
+    figure;
 
-
+    %  Creamos un vector t con parametros alpha que utilizaremos
+    t=0:0.2:1;
+    t = [t flip(t)];
+    iterations = 0;
+    
+    % Loop infinito para ver los resultados
+    while 1
+       
+       % Iteración actual. Utilizamos módulo para siempre tener un número
+       % de iteración > tamaño del vector de alphas t.
+       iterations = mod(iterations,size(t,2)) + 1;
+       
+       % Alpha correspondiente a la iteración actial
+       alpha = t(iterations);
+       
+       % Stores current viewpoint
+       [az, el] = view; 
+       
+       % ¡¡¡¡¡Calcular blendshape y guardar en los vectors X, Y y Z las coordenadas de la nueva malla!!!!
+        X = ...
+        Y = ...
+        Z = ...
+        
+        % Draws mesh
+        trisurf(F,X(:),Y(:),Z(:),'FaceColor',[0.26,0.63,1.0 ],'EdgeColor','none','LineStyle','none','SpecularStrength',0.4);
+      
+        % Sets current viewpoint
+        view (az, el);
+       
+        % Set up lighing
+        light('Position',[-1.0,-1.0,100.0],'Style','infinite');
+        lighting phong;
+        
+        % Set up axis
+        axis equal
+        axis([-1.5 1.5 0 2 -1 1.5])
+       
+        drawnow;
+    end
+end
+</pre>
+                <h2>Ejercicio 3.2.2</h2>
+                <p>
+                ¿Qué pasa cuándo asignamos una <i>alpha</i> mayor que 1, utilizando el método global de blendshapes?  
+                </p> 
+                <h2>Ejercicio 3.2.3</h2>
+                <p>
+                    Usando como referencia la función desarrollada en el ejercicio 3.2.1, implementa la función <code>compute_delta_blendshapes()</code> utilizando el método <i>delta blendshapes</i> presentado en clase. Mezcla <b>más</b> de 2 mallas a la vez. Por ejemplo, consigue una animación donde el personaje abra la boca y cierre los dos ojos. <a href="images/3_2_3/blendshape.gif">Aquí tienes una animación de lo que tienes que conseguir</a>.
+                </p>
+                <h2>Ejercicio 3.2.4</h2>
+                <p>
+                ¿Qué pasa cuándo asignamos una <i>alpha</i> mayor que 1, utilizando el método delta de blendshapes?  
+                </p> 
+                
+            </div>
+                
+            <div class="section">
+            <hr class="smooth">
+            Animación por Computador, 2016 — Dan Casas
+            </div>
+        </div>
+    </div>
 </body>
 </html>
