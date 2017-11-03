@@ -191,7 +191,6 @@ function bezier_linear()
     t = linspace(0,1,100);
     % Evalua la funcion (1-t) * pt1 + t * pt2 en todos los puntos t
     pts = kron((1-t),pt1) + kron(t,pt2);
-    %plot(pts(1,:),pts(2,:))
 
     % Metodo alternativo
     %pts = [];
