@@ -25,10 +25,11 @@
                 <div class="section abstract" >
                     1.1 — <a href="docs/1.1-Interpolacion-v2017.pdf">Interpolación </a><br/>
                     1.2 — <a href="docs/1.2-Movimiento-a-traves-de-una-curva-v2017.pdf">Movimiento a través de una curva </a><br/>
-                    1.3 — <a href="docs/1.3-Sistemas-Keyframe-v2017.pdf">Sistemas keyframe </a><br/><br/>
-<!--
+                    1.3 — <a href="docs/1.3-Sistemas-Keyframe-v2017.pdf">Sistemas keyframe </a><br/>
+                    1.4 — <a href="docs/1.5-Deformacion-de-objetos-v2017.pdf">Deformación de objetos</a><br/><br/>
+
 		    2.1 — <a href="docs/2.1-Cinematica-directa-v2016.pdf">Cinemática directa</a><br/>
-                    2.2 — <a href="docs/2.2-Cinematica-inversa-v2016.pdf">Cinemática inversa</a><br/><br/>
+<!--                    2.2 — <a href="docs/2.2-Cinematica-inversa-v2016.pdf">Cinemática inversa</a><br/><br/>
                     3.1 — <a href="docs/3.1-Caminar-v2016.pdf">Caminar</a><br/>
                     3.2 — <a href="docs/3.2-Animacion-facial-v2016.pdf">Animación Facial</a><br/><br/>
 -->
@@ -257,7 +258,7 @@ end
                 </p>
                 
             </div>
-            <!--
+            
             <div class="section head">
                 <h1>Tema 2.1 — Cinemática directa</h1>
                 
@@ -318,20 +319,20 @@ function plot_skeleton(skeleton, rots)
     0 0 1];
 
     trans0_matrix = [1 0 skeleton(1,1);
-    0 1 skeleton(1,2);
-    0 0 1];
+                     0 1 skeleton(1,2);
+                     0 0 1];
 
     pos             = rot0_matrix * trans0_matrix;
     scatter(pos(1,3), pos(2,3),300,'o','filled');
 
     % Aplicamos nodo 1
     rot1_matrix = [ +cosd(rot1) -sind(rot1) 0;
-    +sind(rot1) +cosd(rot1) 0;
-    0          0          1 ];
+                    +sind(rot1) +cosd(rot1) 0;
+                     0          0          1 ];
 
     trans1_matrix = [1 0 skeleton(2,1);
-    0 1 skeleton(2,2);
-    0 0 1];
+                     0 1 skeleton(2,2);
+                     0 0 1];
 
     old_pos = pos;
     pos     =   rot0_matrix * trans0_matrix ...
@@ -353,7 +354,7 @@ end
             Añade dos eslabones más en la estructura jeráquica del ejercicio anterior.
             </p>
             </div>
-
+<!--
             <div class="section head">
                 <h1>Tema 2.2 — Cinemática inversa</h1>
                 
