@@ -32,8 +32,8 @@
                     2.2 — <a href="docs/2.2-Cinematica-inversa-v2017.pdf">Cinemática inversa</a><br/><br/>
                     
                     3.1 — <a href="docs/3.1-Animacion-humana-v2017.pdf">Animación Humana</a><br/>
-<!--                    3.2 — <a href="docs/3.2-Animacion-facial-v2016.pdf">Animación Facial</a><br/><br/>
--->
+                    3.2 — <a href="docs/3.2-Animacion-facial-v2017.pdf">Animación Facial</a><br/><br/>
+
                 </div>
             <div class="section head">
                 <h1>Tema 1.1 — Interpolación</h1>
@@ -431,7 +431,7 @@ end
                     Descárgate <a href="images/3_1_3/human-motion-start.blend">esta escena de Blender</a> y fíjate en las curvas de valores cómo la translación y la rotación de la pelvis (nodo root). Debería parecerse a <a href="images/3_1_3/curvas-rotacion-pelvis.png">esto</a>, que coincide con los gráficos correspondientes a la acción de caminar como hemos visto en clase. Intenta modificar las curvas en el Editor de Curvas de Blender, y observa cómo cambia la animación.
                 </p> 
             </div>
-     <!--       
+            
             <div class="section head">
                 <h1>Tema 3.2 — Animación Facial</h1>
                 
@@ -451,14 +451,20 @@ end
                 Descárgate <a href="https://www.dropbox.com/s/k7ubi8snpqeh39y/blendshapes.zip?dl=1">este zip</a> que contiene un set de <i>blendshapes</i>, descomprimelo y guárdalas en un directorio. Descárgate también la función para dibujar mallas en format OBJ <code><a href="images/3_2_1/read_vertices_and_faces_from_obj_file.m">read_vertices_and_faces_from_obj_file.m</a></code>.</p>
                 <p>Acaba de implementar la función <code>compute_global_blendshapes()</code>, para que interpole entre 2 mallas utilizado el método de blendshape global que hemos visto en clase.</p>
 <pre class="matlab-code">
-%% Looping global blendshape from alpha 0 to 1 to 0
 function compute_global_blendshapes()
     close all
     
-    % Read OBJ files
-    [V00,F] = read_vertices_and_faces_from_obj_file(PATH); %Substituir PATH por ruta al obj
+    % Path where you uncompress all .obj
+    blendshape_path = '/Users/URJC/Downloads/tri' % ¡¡Actualiza el path!!
     
-    % ¡¡¡¡¡Leer más OBJ aquí!!!!
+    % Read OBJ files
+    [V00,F] = read_vertices_and_faces_from_obj_file(strcat(blendshape_path, '/neutral-tri.obj'));
+    % V00 es una matrix vertices de tamaño [numero_vertices x 3]
+    num_vertices = size(V00,1); % Lee número de vertices
+    % Vectoriza malla 00
+    V00 = vertcat(V00(:,1),V00(:,2),V00(:,3));
+    
+    % ¡¡¡¡Leer más OBJ aquí!!!!
     
     figure;
 
@@ -470,23 +476,27 @@ function compute_global_blendshapes()
     % Loop infinito para ver los resultados
     while 1
        
-       % Iteración actual. Utilizamos módulo para siempre tener un número
-       % de iteración > tamaño del vector de alphas t.
-       iterations = mod(iterations,size(t,2)) + 1;
-       
-       % Alpha correspondiente a la iteración actial
-       alpha = t(iterations);
-       
-       % Stores current viewpoint
-       [az, el] = view; 
-       
-       % ¡¡¡¡¡Calcular blendshape y guardar en los vectors X, Y y Z las coordenadas de la nueva malla!!!!
-        X = ...
-        Y = ...
-        Z = ...
+        % Iteración actual. Utilizamos módulo para siempre tener un número
+        % de iteración > tamaño del vector de alphas t.
+        iterations = mod(iterations,size(t,2)) + 1;
+
+        % Alpha correspondiente a la iteración actial
+        alpha = t(iterations);
+
+        % Stores current viewpoint
+        [az, el] = view; 
+
+        % ¡¡¡¡Calcular blendshape!!!!
+        V_blend = ...
+        
+        % Reshapes from vectorized mesh to [num_vertices,3]
+        V_blend = reshape(V_blend,[num_vertices,3]);
         
         % Draws mesh
-        trisurf(F,X(:),Y(:),Z(:),'FaceColor',[0.26,0.63,1.0 ],'EdgeColor','none','LineStyle','none','SpecularStrength',0.4);
+        trisurf(F,V_blend(:, 1),...
+                  V_blend(:, 2),...
+                  V_blend(:, 3),...
+                  'FaceColor',[0.26,0.63,1.0 ],'EdgeColor','none','LineStyle','none','SpecularStrength',0.4);
       
         % Sets current viewpoint
         view (az, el);
@@ -517,7 +527,7 @@ end
                 </p> 
                 
             </div>
-                -->
+                
             <div class="section">
             <hr class="smooth">
             Animación por Computador, 2017 — Dan Casas
