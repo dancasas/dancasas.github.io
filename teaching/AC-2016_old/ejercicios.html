@@ -23,20 +23,13 @@
                     <h1>Slides</h1>
                 </div>
                 <div class="section abstract" >
-                    1.1 — <a href="docs/1.1-Interpolacion-v2017.pdf">Interpolación </a><br/>
-                    <!--
-                    1.2 — <a href="docs/1.2-Movimiento-a-traves-de-una-curva-v2017.pdf">Movimiento a través de una curva </a><br/>
-                    1.3 — <a href="docs/1.3-Sistemas-Keyframe-v2017.pdf">Sistemas keyframe </a><br/>
-                    1.4 — <a href="docs/1.5-Deformacion-de-objetos-v2017.pdf">Deformación de objetos</a><br/>
-                    <br/>
-                    2.1 — <a href="docs/2.1-Cinematica-directa-v2017.pdf">Cinemática directa</a><br/>
-                    2.2 — <a href="docs/2.2-Cinematica-inversa-v2017.pdf">Cinemática inversa</a><br/>
-                    <br/>
-                    3.1 — <a href="docs/3.1-Animacion-humana-v2017.pdf">Animación Humana</a><br/>
-                    3.2 — <a href="docs/3.2-Animacion-facial-v2017.pdf">Animación Facial</a><br/>
-                    3.3 — <a href="docs/3.3-Cloth-v2017.pdf">Cloth Simulation</a><br/><br/>
-                    <br/>
-                    -->
+                    1.1 — <a href="docs/1.1-Interpolacion-v2016.pdf">Interpolación </a><br/>
+                    1.2 — <a href="docs/1.2-Movimiento-a-traves-de-una-curva-v2016.pdf">Movimiento a través de una curva </a><br/>
+                    1.3 — <a href="docs/1.3-Sistemas-Keyframe.pdf">Sistemas keyframe </a><br/><br/>
+                    2.1 — <a href="docs/2.1-Cinematica-directa-v2016.pdf">Cinemática directa</a><br/>
+                    2.2 — <a href="docs/2.2-Cinematica-inversa-v2016.pdf">Cinemática inversa</a><br/><br/>
+                    3.1 — <a href="docs/3.1-Caminar-v2016.pdf">Caminar</a><br/>
+                    3.2 — <a href="docs/3.2-Animacion-facial-v2016.pdf">Animación Facial</a><br/><br/>
                 </div>
             <div class="section head">
                 <h1>Tema 1.1 — Interpolación</h1>
@@ -80,9 +73,7 @@ function plot_hermite_basis()
     
     hold off;
 end                    </pre>
-                
-		
-
+                <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/plot_hermite_basis.m">Solución</a>
                 </p>
             </div>
             
@@ -97,14 +88,12 @@ function hermite_interpolation_demo()
     x = [0,1];
     y = [1,1];
                     
-    % Completar ...
+    % Completar
                     
     plot(x,y);
     hold off;
 end</pre>
- 
-                 
-
+                    <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/hermite_interpolation_demo.m">Solución</a>
                 </p>
             </div>
             <div class="section abstract" >
@@ -130,9 +119,7 @@ end</pre>
                 
                 ¿Cuál es el valor del cuarto polinomio interpolador en <code>x=-9</code>, <code>x=-4</code> y <code>x=-1</code>?
                 <br/><br/>
-                 
-		
-
+                 <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/lagrange_interpolation_demo.m">Solución</a>
                 </p>
             </div>
             
@@ -141,9 +128,7 @@ end</pre>
                 <p>
                 Interpolar y dibujar en MATLAB con splines lineales la función <code>f(x) = 1 / x</code> en los puntos en los que  <code>x</code> vale <code>1, 2 y 4</code>.
                 <br/><br/>
-                
-		
-		
+                <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/linear_spline_interpolation.m">Solución</a>
                 </p>
                 
             </div>
@@ -151,13 +136,11 @@ end</pre>
             <div class="section abstract" >
                 <h2>Ejercicio 1.1.5</h2>
                 <p>
-                Interpolar y dibujar en MATLAB  con splines quadráticas (grado 2) la función <code>f(x)</code> que pasa por los puntos <code>f(3) = 2.5; f(4.5) = 1;  f(7) = 2.5; f(9)=0.5</code>. Utiliza la función de MATLAB <code>X = linsolve(A,b)</code> o el operador <code>X = A\b</code> para resolver el sistema de ecuaciones.
+                Interpolar y dibujar en MATLAB  con splines quadráticas (grado 2) la función <code>f(x)</code> que pasa por los puntos <code>f(3) = 2.5; f(4.5) = 1;  f(7) = 2.5; f(9)=0.5</code>. Utiliza la función de MATLAB <code>X = linsolve(A,b)</code> para resolver el sistema de ecuaciones.
                 <br/><br/>
                 Se trata de un sistema indeterminado, con más incognitas que ecuaciones. ¿Qué se puede hacer en estos casos? Calcula por lo menos 2 posibles soluciones del sistema, y dibuja las splines resultantes en MATLAB.
                 <br/><br/>
-
-                
-
+                <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/quadratic_spline_interpolation.m">Solución</a>
                 </p>
             </div>
             <div class="section abstract" >
@@ -196,6 +179,7 @@ function bezier_linear()
     t = linspace(0,1,100);
     % Evalua la funcion (1-t) * pt1 + t * pt2 en todos los puntos t
     pts = kron((1-t),pt1) + kron(t,pt2);
+    %plot(pts(1,:),pts(2,:))
 
     % Metodo alternativo
     %pts = [];
@@ -211,7 +195,7 @@ end
                 </p>
                 
             </div>
-             <!--
+            
             <div class="section head">
                 <h1>Tema 1.2 — Movimiento a través de una curva</h1>
                 
@@ -228,27 +212,23 @@ end
             </div>
             
             <div class="section abstract" >
-                <h2>Ejercicio 1.2.1 – <font color="red">Entrega el 19 de Noviembre 2017</font> </h2>
+                <h2>Ejercicio 1.2.1</h2>
                 <p>
                 Escribe una funcion en MATLAB llamada <code>compute_arc_length_cubic_bezier(pt1, pt2, pt3, pt4, samples)</code> que calcule mediante <i>Forward Differencing</i> la longitud del arco de una curva cúbica de Bezier. ¿Cómo cambia el resultado en función del parámetro <code>samples</code>?
                 <br/><br/>
-                
-                    <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/compute_arc_length_cubic_bezier.m">Solución</a>
-                
+                <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/compute_arc_length_cubic_bezier.m">Solución</a>
                 </p>
                 
-                <h2>Ejercicio 1.2.2 – <font color="red">Entrega el 19 de Noviembre 2017</font></h2>
+                <h2>Ejercicio 1.2.2</h2>
                 <p>
                 Escribe una función en MATLAB que dados 4 puntos de control, calcule su curva de Bezier y marque sobre ella: puntos equidistantes con respecto el parámetro <code>t</code> (tiempo) y con respecto el parámetro <code>s</code> (longitud del arco). El resultado final debería ser parecido a <b><a href="trivial-VS-constant.png">esto</a></b>.
                 
                 <br/><br/>
-                
-                    <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/equidistance_points.m">Solución</a>
-                
+                <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/equidistance_points.m">Solución</a>
                 </p>
                 
 
-                <h2>Ejercicio 1.2.3 – <font color="red">Entrega el 19 de Noviembre 2017</font></h2>
+                <h2>Ejercicio 1.2.3</h2>
                 <p>
                 ¿Qué condiciones tienen que darse para que una curva formada por 2 curvas de Bezier tenga continuidad C<sup>0</sup>? ¿Y C<sup>1</sup>?
                 </p>
@@ -256,14 +236,12 @@ end
                 Dibuja en MATLAB un curva cerrada con continuidad C<sup>1</sup> creada por 4 curvas cúbicas de Bezier. Utiliza transformaciones del tipo translación y escalado en los puntos de control para cambiar el tamaño la curva dibujada. <b><a href="bezier-joint.png">Aquí</a></b> tienes un ejemplo del tipo de resultado que puedes conseguir.
                 
                 <br/><br/>
-                
-                    <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/bezier_joint.m">Solución</a>
+                <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/bezier_joint.m">Solución</a>
                 
                 </p>
                 
             </div>
-        -->
-            <!--
+            
             <div class="section head">
                 <h1>Tema 2.1 — Cinemática directa</h1>
                 
@@ -324,20 +302,20 @@ function plot_skeleton(skeleton, rots)
     0 0 1];
 
     trans0_matrix = [1 0 skeleton(1,1);
-                     0 1 skeleton(1,2);
-                     0 0 1];
+    0 1 skeleton(1,2);
+    0 0 1];
 
     pos             = rot0_matrix * trans0_matrix;
     scatter(pos(1,3), pos(2,3),300,'o','filled');
 
     % Aplicamos nodo 1
     rot1_matrix = [ +cosd(rot1) -sind(rot1) 0;
-                    +sind(rot1) +cosd(rot1) 0;
-                     0          0          1 ];
+    +sind(rot1) +cosd(rot1) 0;
+    0          0          1 ];
 
     trans1_matrix = [1 0 skeleton(2,1);
-                     0 1 skeleton(2,2);
-                     0 0 1];
+    0 1 skeleton(2,2);
+    0 0 1];
 
     old_pos = pos;
     pos     =   rot0_matrix * trans0_matrix ...
@@ -359,8 +337,7 @@ end
             Añade dos eslabones más en la estructura jeráquica del ejercicio anterior.
             </p>
             </div>
-        -->
-<!--
+
             <div class="section head">
                 <h1>Tema 2.2 — Cinemática inversa</h1>
                 
@@ -376,7 +353,7 @@ end
                 
             </div>
             <div class="section abstract" >
-                <h2>Ejercicio 2.2.1 — <font color="red">Entrega el 3 de Diciembre 2017</font></h2>
+                <h2>Ejercicio 2.2.1 — <font color="red">Entrega el 4 de Diciembre 2016</font></h2>
                 <p>
                 Desarrolla una función de Cinemática Inversa <code>run_IK()</code> que, dado una cadena jerárquica en reposo (vector de desplazamientos en 2D) y un objetivo (una coordenada 2D), calcule el valor de cada uno de los ángulos del cadena de tal forma que el <i>end effector</i> (punta de la cadena) este lo más cerca posible al objetivo. Para ello, utiliza la técnica del Jacobiano explicada en clase, y visualiza en MATLAB cada una de las iteraciones.</p>
                 <p><a href="images/2_2_1/IK.gif"><b>Aquí</b></a> tienes una animación de cómo debería ser el resultado</p>
@@ -392,17 +369,18 @@ while(error(current_position, target) > 0.1)
     J = compute_jacobian(skeleton, rots);
 
     % Calcula posicion actual del end effector
-    
+    current_position = compute_position(skeleton, rots);
+
     % Calcula incrementos de las rotaciones
+    update = ... ;
 
     % Actualiza rotaciones
-
+    rots(1) = rots(1) + update(1);
+    rots(2) = rots(2) + update(2);
+    rots(3) = rots(3) + update(3);
 end
 </pre>
             </div>
-
-        -->
- <!--
             <div class="section head">
                 <h1>Tema 3.1 — Caminar</h1>
                 
@@ -458,20 +436,14 @@ end
                 Descárgate <a href="https://www.dropbox.com/s/k7ubi8snpqeh39y/blendshapes.zip?dl=1">este zip</a> que contiene un set de <i>blendshapes</i>, descomprimelo y guárdalas en un directorio. Descárgate también la función para dibujar mallas en format OBJ <code><a href="images/3_2_1/read_vertices_and_faces_from_obj_file.m">read_vertices_and_faces_from_obj_file.m</a></code>.</p>
                 <p>Acaba de implementar la función <code>compute_global_blendshapes()</code>, para que interpole entre 2 mallas utilizado el método de blendshape global que hemos visto en clase.</p>
 <pre class="matlab-code">
+%% Looping global blendshape from alpha 0 to 1 to 0
 function compute_global_blendshapes()
     close all
     
-    % Path where you uncompress all .obj
-    blendshape_path = '/Users/URJC/Downloads/tri' % ¡¡Actualiza el path!!
-    
     % Read OBJ files
-    [V00,F] = read_vertices_and_faces_from_obj_file(strcat(blendshape_path, '/neutral-tri.obj'));
-    % V00 es una matrix vertices de tamaño [numero_vertices x 3]
-    num_vertices = size(V00,1); % Lee número de vertices
-    % Vectoriza malla 00
-    V00 = vertcat(V00(:,1),V00(:,2),V00(:,3));
+    [V00,F] = read_vertices_and_faces_from_obj_file(PATH); %Substituir PATH por ruta al obj
     
-    % ¡¡¡¡Leer más OBJ aquí!!!!
+    % ¡¡¡¡¡Leer más OBJ aquí!!!!
     
     figure;
 
@@ -483,27 +455,23 @@ function compute_global_blendshapes()
     % Loop infinito para ver los resultados
     while 1
        
-        % Iteración actual. Utilizamos módulo para siempre tener un número
-        % de iteración > tamaño del vector de alphas t.
-        iterations = mod(iterations,size(t,2)) + 1;
-
-        % Alpha correspondiente a la iteración actial
-        alpha = t(iterations);
-
-        % Stores current viewpoint
-        [az, el] = view; 
-
-        % ¡¡¡¡Calcular blendshape!!!!
-        V_blend = ...
-        
-        % Reshapes from vectorized mesh to [num_vertices,3]
-        V_blend = reshape(V_blend,[num_vertices,3]);
+       % Iteración actual. Utilizamos módulo para siempre tener un número
+       % de iteración > tamaño del vector de alphas t.
+       iterations = mod(iterations,size(t,2)) + 1;
+       
+       % Alpha correspondiente a la iteración actial
+       alpha = t(iterations);
+       
+       % Stores current viewpoint
+       [az, el] = view; 
+       
+       % ¡¡¡¡¡Calcular blendshape y guardar en los vectors X, Y y Z las coordenadas de la nueva malla!!!!
+        X = ...
+        Y = ...
+        Z = ...
         
         % Draws mesh
-        trisurf(F,V_blend(:, 1),...
-                  V_blend(:, 2),...
-                  V_blend(:, 3),...
-                  'FaceColor',[0.26,0.63,1.0 ],'EdgeColor','none','LineStyle','none','SpecularStrength',0.4);
+        trisurf(F,X(:),Y(:),Z(:),'FaceColor',[0.26,0.63,1.0 ],'EdgeColor','none','LineStyle','none','SpecularStrength',0.4);
       
         % Sets current viewpoint
         view (az, el);
@@ -534,32 +502,10 @@ end
                 </p> 
                 
             </div>
-        -->
-            <!--
-            <div class="section head">
-                <h1>Tema 3.3 — Cloth simulation</h1>
-                
-                <div class="authors">
-                    Ejercicios
-                </div>
-                
-                <div class="affiliations">
-                </div>
-                            
-                <div class="venue"></div>
-                
-            </div>
-            <div class="section abstract" >
-                <h2>Ejercicio 3.2.1</h2>
-                <p>
-                    Descárgate <a href="https://www.dropbox.com/s/0uoxamli0smbqbm/cloth_simulation.blend?dl=1">esta</a> escena de Blender
-                </p>    
-            </div>
-            -->
                 
             <div class="section">
             <hr class="smooth">
-            Animación por Computador, 2018 — Dan Casas
+            Animación por Computador, 2016 — Dan Casas
             </div>
         </div>
     </div>

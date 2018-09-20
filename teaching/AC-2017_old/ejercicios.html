@@ -24,7 +24,6 @@
                 </div>
                 <div class="section abstract" >
                     1.1 — <a href="docs/1.1-Interpolacion-v2017.pdf">Interpolación </a><br/>
-                    <!--
                     1.2 — <a href="docs/1.2-Movimiento-a-traves-de-una-curva-v2017.pdf">Movimiento a través de una curva </a><br/>
                     1.3 — <a href="docs/1.3-Sistemas-Keyframe-v2017.pdf">Sistemas keyframe </a><br/>
                     1.4 — <a href="docs/1.5-Deformacion-de-objetos-v2017.pdf">Deformación de objetos</a><br/>
@@ -36,7 +35,6 @@
                     3.2 — <a href="docs/3.2-Animacion-facial-v2017.pdf">Animación Facial</a><br/>
                     3.3 — <a href="docs/3.3-Cloth-v2017.pdf">Cloth Simulation</a><br/><br/>
                     <br/>
-                    -->
                 </div>
             <div class="section head">
                 <h1>Tema 1.1 — Interpolación</h1>
@@ -81,7 +79,7 @@ function plot_hermite_basis()
     hold off;
 end                    </pre>
                 
-		
+		<img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="https://www.dropbox.com/s/6vo8ukmq66a23n3/plot_hermite_basis.m">Solución</a>
 
                 </p>
             </div>
@@ -103,7 +101,7 @@ function hermite_interpolation_demo()
     hold off;
 end</pre>
  
-                 
+                 <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="https://www.dropbox.com/s/x4t74pj8zg5b6im/hermite_interpolation_demo.m">Solución</a>
 
                 </p>
             </div>
@@ -131,7 +129,7 @@ end</pre>
                 ¿Cuál es el valor del cuarto polinomio interpolador en <code>x=-9</code>, <code>x=-4</code> y <code>x=-1</code>?
                 <br/><br/>
                  
-		
+		<img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="https://www.dropbox.com/s/yo9drccjx7ou7fc/lagrange_interpolation_demo.m">Solución</a>
 
                 </p>
             </div>
@@ -142,7 +140,7 @@ end</pre>
                 Interpolar y dibujar en MATLAB con splines lineales la función <code>f(x) = 1 / x</code> en los puntos en los que  <code>x</code> vale <code>1, 2 y 4</code>.
                 <br/><br/>
                 
-		
+		<img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="https://www.dropbox.com/s/qxm5tbs6djyj63s/linear_spline_interpolation.m">Solución</a>
 		
                 </p>
                 
@@ -156,7 +154,7 @@ end</pre>
                 Se trata de un sistema indeterminado, con más incognitas que ecuaciones. ¿Qué se puede hacer en estos casos? Calcula por lo menos 2 posibles soluciones del sistema, y dibuja las splines resultantes en MATLAB.
                 <br/><br/>
 
-                
+                <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="https://www.dropbox.com/s/xf0wbystgwb5qdi/quadratic_spline_interpolation.m">Solución</a>
 
                 </p>
             </div>
@@ -211,7 +209,7 @@ end
                 </p>
                 
             </div>
-             <!--
+            
             <div class="section head">
                 <h1>Tema 1.2 — Movimiento a través de una curva</h1>
                 
@@ -232,9 +230,9 @@ end
                 <p>
                 Escribe una funcion en MATLAB llamada <code>compute_arc_length_cubic_bezier(pt1, pt2, pt3, pt4, samples)</code> que calcule mediante <i>Forward Differencing</i> la longitud del arco de una curva cúbica de Bezier. ¿Cómo cambia el resultado en función del parámetro <code>samples</code>?
                 <br/><br/>
-                
+                <!--
                     <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/compute_arc_length_cubic_bezier.m">Solución</a>
-                
+                -->
                 </p>
                 
                 <h2>Ejercicio 1.2.2 – <font color="red">Entrega el 19 de Noviembre 2017</font></h2>
@@ -242,9 +240,9 @@ end
                 Escribe una función en MATLAB que dados 4 puntos de control, calcule su curva de Bezier y marque sobre ella: puntos equidistantes con respecto el parámetro <code>t</code> (tiempo) y con respecto el parámetro <code>s</code> (longitud del arco). El resultado final debería ser parecido a <b><a href="trivial-VS-constant.png">esto</a></b>.
                 
                 <br/><br/>
-                
+                <!--
                     <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/equidistance_points.m">Solución</a>
-                
+                -->
                 </p>
                 
 
@@ -256,14 +254,13 @@ end
                 Dibuja en MATLAB un curva cerrada con continuidad C<sup>1</sup> creada por 4 curvas cúbicas de Bezier. Utiliza transformaciones del tipo translación y escalado en los puntos de control para cambiar el tamaño la curva dibujada. <b><a href="bezier-joint.png">Aquí</a></b> tienes un ejemplo del tipo de resultado que puedes conseguir.
                 
                 <br/><br/>
-                
+                <!--
                     <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/bezier_joint.m">Solución</a>
-                
+                -->
                 </p>
                 
             </div>
-        -->
-            <!--
+            
             <div class="section head">
                 <h1>Tema 2.1 — Cinemática directa</h1>
                 
@@ -359,8 +356,7 @@ end
             Añade dos eslabones más en la estructura jeráquica del ejercicio anterior.
             </p>
             </div>
-        -->
-<!--
+
             <div class="section head">
                 <h1>Tema 2.2 — Cinemática inversa</h1>
                 
@@ -401,8 +397,6 @@ end
 </pre>
             </div>
 
-        -->
- <!--
             <div class="section head">
                 <h1>Tema 3.1 — Caminar</h1>
                 
@@ -534,8 +528,7 @@ end
                 </p> 
                 
             </div>
-        -->
-            <!--
+            
             <div class="section head">
                 <h1>Tema 3.3 — Cloth simulation</h1>
                 
@@ -555,11 +548,11 @@ end
                     Descárgate <a href="https://www.dropbox.com/s/0uoxamli0smbqbm/cloth_simulation.blend?dl=1">esta</a> escena de Blender
                 </p>    
             </div>
-            -->
+            
                 
             <div class="section">
             <hr class="smooth">
-            Animación por Computador, 2018 — Dan Casas
+            Animación por Computador, 2017 — Dan Casas
             </div>
         </div>
     </div>
