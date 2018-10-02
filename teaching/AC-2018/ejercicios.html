@@ -209,7 +209,7 @@ end
                 </p>
                 
             </div>
-             <!--
+             
             <div class="section head">
                 <h1>Tema 1.2 — Movimiento a través de una curva</h1>
                 
@@ -226,41 +226,67 @@ end
             </div>
             
             <div class="section abstract" >
-                <h2>Ejercicio 1.2.1 – <font color="red">Entrega el 19 de Noviembre 2017</font> </h2>
+                <h2>Ejercicio 1.2.1 – <font color="red">Entrega el 8 de Octubre 2018, 23:59</font> </h2>
                 <p>
                 Escribe una funcion en MATLAB llamada <code>compute_arc_length_cubic_bezier(pt1, pt2, pt3, pt4, samples)</code> que calcule mediante <i>Forward Differencing</i> la longitud del arco de una curva cúbica de Bezier. ¿Cómo cambia el resultado en función del parámetro <code>samples</code>?
                 <br/><br/>
                 
-                    <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/compute_arc_length_cubic_bezier.m">Solución</a>
+                    <!--<img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="#">Solución</a>-->
                 
                 </p>
                 
-                <h2>Ejercicio 1.2.2 – <font color="red">Entrega el 19 de Noviembre 2017</font></h2>
+                <h2>Ejercicio 1.2.2 – <font color="red">Entrega el 8 de Octubre 2018, 23:59</font></h2>
                 <p>
                 Escribe una función en MATLAB que dados 4 puntos de control, calcule su curva de Bezier y marque sobre ella: puntos equidistantes con respecto el parámetro <code>t</code> (tiempo) y con respecto el parámetro <code>s</code> (longitud del arco). El resultado final debería ser parecido a <b><a href="trivial-VS-constant.png">esto</a></b>.
                 
                 <br/><br/>
                 
-                    <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/equidistance_points.m">Solución</a>
+                    <!--<img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="#">Solución</a>-->
                 
                 </p>
                 
 
-                <h2>Ejercicio 1.2.3 – <font color="red">Entrega el 19 de Noviembre 2017</font></h2>
-                <p>
-                ¿Qué condiciones tienen que darse para que una curva formada por 2 curvas de Bezier tenga continuidad C<sup>0</sup>? ¿Y C<sup>1</sup>?
-                </p>
+                <h2>Ejercicio 1.2.3 – <font color="red">Entrega el 8 de Octubre 2018, 23:59</font></h2>
                 <p>
                 Dibuja en MATLAB un curva cerrada con continuidad C<sup>1</sup> creada por 4 curvas cúbicas de Bezier. Utiliza transformaciones del tipo translación y escalado en los puntos de control para cambiar el tamaño la curva dibujada. <b><a href="bezier-joint.png">Aquí</a></b> tienes un ejemplo del tipo de resultado que puedes conseguir.
                 
                 <br/><br/>
                 
-                    <img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="soluciones/bezier_joint.m">Solución</a>
-                
+                    <!--<img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="#">Solución</a>-->
                 </p>
                 
+                <h2>Ejercicio 1.2.4 – <font color="red">Entrega el 8 de Octubre 2018, 23:59</font></h2>
+                <p>
+                Crea una imagen en la que aparezca una letra cualquiera (<a href="https://www.dropbox.com/s/um959pf2q42grdf/d.jpg">ejemplo</a>), y cárgala como imagen de fondo de un <code>figure</code> como se hace en el principio de la función <code>function bezier_over_letter()</code> que se muestra a continuación. Completa el resto de la función de manera que la silueta de la letra se aproxime mediante curvas de Bezier cúbicas.
+
+                Una vez tengas todas curvas necesarias, escálalas para obtener la misma letra más grande y más pequeña.
+                </p>
+                <pre class="matlab-code">
+function bezier_over_letter()
+    cla
+
+    img = imread('d.jpg'); %  actualizar path a imagen
+    image('CData',img,'XData',[-100 100],'YData',[100 -100])
+
+    xlim([-100 100])
+    ylim([-100 100])
+
+    axis equal
+    grid on;
+    hold on;
+
+    % completar
+
+    hold off;
+end
+
+                </pre>
+                <br/>
+                
+                    <!--<img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="#">Solución</a>-->
+                </p>
             </div>
-        -->
+        
             <!--
             <div class="section head">
                 <h1>Tema 2.1 — Cinemática directa</h1>
