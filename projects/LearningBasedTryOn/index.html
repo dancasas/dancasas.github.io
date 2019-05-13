@@ -1,0 +1,116 @@
+<!doctype html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64375-4', 'auto');
+  ga('send', 'pageview');
+</script>
+<head><meta charset="utf-8">
+	<title>Dan Casas</title>
+	<meta name="title" content="Dan Casas" />
+	<meta name="description" content="Dan Casas" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" id="favicon" href="../../favicon.png"> 
+	<meta name="author" content="Dan Casas">
+
+	<!-- JAVASCRIPT -->	
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/css.css">
+	<link rel="stylesheet" type="text/css" href="css/project.css" media="screen">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css" />
+
+
+
+	<!-- Docs Bootstrap: getbootstrap.com -->
+</head>
+<!-- Els atributs del bodi son per que el menu reflexi el lloc on estas mentre fas scroll. El offset coincideix amb el padding-top del body -->
+<body id="dan" data-spy="scroll" data-target="#menu" data-offset="70">
+	<!-- Les ID son per cada seccio, per que fagi scroll al fer click al menu, vindrien a ser links -->
+	<section id="paper_title">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" id="top">
+				<h2><b>Learning-Based Animation of Clothing for Virtual Try-On</b></h2>	
+				<h4>Computer Graphics Forum (Proc. of Eurographics), 2019<br/>
+				Igor Santesteban, Miguel A. Otaduy and Dan Casas</h4><br/><br/>
+				<iframe style="display: block; margin: auto;" width="560" height="315" src="https://www.youtube.com/embed/o2KJoAhEGg8" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</section>
+	<section id="abstract">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" id="top">
+				<h3>Abstract</h3>
+				<p>This paper presents a learning-based clothing animation method for highly efficient virtual try-on simulation. Given a garment, we preprocess a rich database of physically-based dressed character  imulations, for multiple body shapes and animations. Then, using this database, we train a learning-based model of cloth drape and wrinkles, as a function of body shape and dynamics. We propose a  odel that separates global garment fit, due to body shape, from local garment wrinkles, due to both pose dynamics and body shape. We use a recurrent neural network to regress garment wrinkles, and we achieve highly plausible nonlinear effects, in contrast to the blending artifacts suffered by previous methods. At runtime, dynamic virtual try-on animations are produced in just a few milliseconds for garments with thousands of triangles. We show qualitative and quantitative analysis of results.</p>
+			</div>
+		</div>
+	</section>
+	
+	<section id="files">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Files</h3>
+				
+				<ul>
+					<li class="grid">
+						<div class="griditem">
+							<a href="http://dancasas.github.io/docs/santesteban_Eurographics2019.pdf" target="_blank" class="imageLink"><img src="contents/santesteban_EG2019_thumb.jpg"></a><br>
+							<a href="http://dancasas.github.io/docs/santesteban_Eurographics2019.pdf" target="_blank">Paper (5MB)</a><br>
+				  		</div>
+					</li>
+				</ul>
+				<br>
+			</div>
+		</div>
+	</section>
+
+	<section id="bibtex">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Citation</h3>
+				<pre>@article {santesteban2019virtualtryon,
+    journal = {Computer Graphics Forum (Proc. Eurographics)},
+    title = {{Learning-Based Animation of Clothing for Virtual Try-On}},
+    author = {Santesteban, Igor and Otaduy, Miguel A. and Casas, Dan},
+    year = {2019},
+    ISSN = {1467-8659},
+    DOI = {10.1111/cgf.13643}
+}</pre>
+				   
+			</div>
+		</div>
+	</section>
+
+	<section id="images">
+        <div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Images</h3>
+
+            </div>
+		</div>
+    </section>
+	<section id="contact">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Contact</h3>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
+<script type="text/javascript">    
+    /* SCROLL ALS LINKS */
+    $('#menu .navbar-left li a, .navbar-brand').bind('click', function(e) {
+        e.preventDefault(); // Deshabilitat la acció per defecte (que és anar al link directament, i aixi hi anem fent scroll molon)
+        $('html,body').animate({scrollTop: $(this.hash).offset().top - 70}, 'slow');                                                         
+    });
+</script>
