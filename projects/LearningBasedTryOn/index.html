@@ -28,20 +28,25 @@
 	<link rel="stylesheet" type="text/css" href="css/project.css" media="screen">
 	<link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css" />
 
-
-
 	<!-- Docs Bootstrap: getbootstrap.com -->
 </head>
 <!-- Els atributs del bodi son per que el menu reflexi el lloc on estas mentre fas scroll. El offset coincideix amb el padding-top del body -->
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+
 <body id="dan" data-spy="scroll" data-target="#menu" data-offset="70">
 	<!-- Les ID son per cada seccio, per que fagi scroll al fer click al menu, vindrien a ser links -->
 	<section id="paper_title">
 		<div class="container-fluid">
 			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" id="top">
 				<h2><b>Learning-Based Animation of Clothing for Virtual Try-On</b></h2>	
-				<h4>Computer Graphics Forum (Proc. of Eurographics), 2019<br/>
-				Igor Santesteban, Miguel A. Otaduy and Dan Casas</h4><br/><br/>
+				<h4 style="line-height:1.65;"><a href="http://isantesteban.com" target="_blank" >Igor Santesteban</a>, <a href="http://mslab.es" target="_blank" >Miguel A. Otaduy</a>, and <a href="http://dancasas.github.io" target="_blank" >Dan Casas</a><br/>
+				<i>Computer Graphics Forum (Proc. of Eurographics)</i>, 2019</h4><br/><br/>
+				<!--
 				<iframe style="display: block; margin: auto;" width="560" height="315" src="https://www.youtube.com/embed/o2KJoAhEGg8" frameborder="0" allowfullscreen></iframe>
+				-->
+
+				<div class='embed-container'><iframe src='https://www.youtube.com/embed/o2KJoAhEGg8' frameborder='0' allowfullscreen></iframe></div>
 			</div>
 		</div>
 	</section>
@@ -96,6 +101,10 @@
 				<img style="margin: 20px 0px" src="video2.gif">
 				<br/>
 				<img style="margin: 20px 0px" src="video1.gif">
+				<br/>
+				<a href="contents/teaser_poses.jpg"><img style="margin: 20px 0px; width: 480px;" src="contents/teaser_poses.jpg"></a>
+				<br/>
+				<a href="contents/comparison_test.jpg"><img style="margin: 20px 0px; width: 480px;" src="contents/comparison_test.jpg"></a>
             </div>
 		</div>
     </section>
@@ -104,10 +113,18 @@
 		<div class="container-fluid">
 			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 				<h3>Contact</h3>
+				Igor Santesteban – igor.santesteban@urjc.es<br>
+				Dan Casas – dan.casas@urjc.es
 			</div>
 		</div>
 	</section>
-
+	<footer>
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<br/><br/><br/>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
 <script type="text/javascript">    
