@@ -212,6 +212,47 @@ end
                 </p>
                 
             </div>
+            
+            <div class="section abstract" >
+                <h2>Ejercicio 1.1.7 – <font color="red">Entrega el 8 de Octubre 2019, 23:59</font></h2>
+                <p>
+                Dibuja en MATLAB un curva cerrada con continuidad C<sup>1</sup> creada por 4 curvas cúbicas de Bezier. Utiliza transformaciones del tipo translación y escalado en los puntos de control para cambiar el tamaño la curva dibujada. <b><a href="bezier-joint.jpg">Aquí</a></b> tienes un ejemplo del tipo de resultado que puedes conseguir.
+                
+                <br/><br/>
+                
+                    <!--<img src="images/check.png" style="width:0.8em; height:0.8em;"><a href="#">Solución</a>-->
+                </p>
+                
+                <h2>Ejercicio 1.1.8 – <font color="red">Entrega el 8 de Octubre 2019, 23:59</font></h2>
+                <p>
+                Crea una imagen en la que aparezca una letra cualquiera (<a href="https://www.dropbox.com/s/um959pf2q42grdf/d.jpg">ejemplo</a>), y cárgala como imagen de fondo de un <code>figure</code> como se hace en el principio de la función <code>function bezier_over_letter()</code> que se muestra a continuación. Completa el resto de la función de manera que la silueta de la letra se aproxime mediante curvas de Bezier cúbicas.
+
+                Una vez tengas todas curvas necesarias, escálalas para obtener la misma letra más grande y más pequeña.
+                </p>
+                <pre class="matlab-code">
+function bezier_over_letter()
+    cla
+
+    img = imread('d.jpg'); %  actualizar path a imagen
+    image('CData',img,'XData',[-100 100],'YData',[100 -100])
+
+    xlim([-100 100])
+    ylim([-100 100])
+
+    axis equal
+    grid on;
+    hold on;
+
+    % completar
+
+    hold off;
+end
+
+                </pre>
+                <h2>Ejercicio 1.1.9 – <font color="red">Entrega el 8 de Octubre 2019, 23:59</font></h2>
+                <p>
+                Desarrolla una función <code>draw_bezier_surface.m</code> que dibuje una superficie de Bezier cuadrática. 
+                </p>
         <!--
             <div class="section head">
                 <h1>Tema 1.2 — Movimiento a través de una curva</h1>
