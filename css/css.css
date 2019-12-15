@@ -80,6 +80,21 @@ table, table tr {
 	background-color: #333;
 }
 
+.nav-social-large {
+    margin-left: 5px;
+    padding-top: 13px;
+    width: 170px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+}
+
+.nav-social-large:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
 .nav-social {
 	margin-left:5px;
 	padding-top: 13px;
