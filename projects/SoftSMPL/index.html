@@ -1,0 +1,159 @@
+<!doctype html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64375-4', 'auto');
+  ga('send', 'pageview');
+</script>
+<head><meta charset="utf-8">
+	<title>SoftSMPL: Data-driven Modeling of Nonlinear Soft-tissue Dynamics for Parametric Humans (Eurographics 2020)</title>
+	<meta name="title" content="SoftSMPL: Data-driven Modeling of Nonlinear Soft-tissue Dynamics for Parametric Humans" />
+	<meta name="description" content="SoftSMPL: Data-driven Modeling of Nonlinear Soft-tissue Dynamics for Parametric Humans" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" id="favicon" href="../../favicon.png"> 
+	<meta name="author" content="Dan Casas">
+
+	<!-- JAVASCRIPT -->	
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/css.css">
+	<link rel="stylesheet" type="text/css" href="css/project.css" media="screen">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css" />
+
+	<!-- Docs Bootstrap: getbootstrap.com -->
+</head>
+<!-- Els atributs del bodi son per que el menu reflexi el lloc on estas mentre fas scroll. El offset coincideix amb el padding-top del body -->
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+
+<body id="dan" data-spy="scroll" data-target="#menu" data-offset="70">
+	<!-- Les ID son per cada seccio, per que fagi scroll al fer click al menu, vindrien a ser links -->
+	<section id="paper_title">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" id="top">
+				<h2><b>SoftSMPL: Data-driven Modeling of Nonlinear Soft-tissue Dynamics for Parametric Humans</b></h2>	
+				<h4 style="line-height:1.65;"><a href="http://isantesteban.com" target="_blank" >Igor Santesteban</a>, <a href="http://www.elenagarces.es/">Elena Garces</a>, <a href="http://mslab.es" target="_blank" >Miguel A. Otaduy</a>, and <a href="http://dancasas.github.io" target="_blank" >Dan Casas</a><br/>
+				<i>Computer Graphics Forum (Proc. of Eurographics)</i>, 2020</h4><br/><br/>
+				<!--
+				<iframe style="display: block; margin: auto;" width="560" height="315" src="https://www.youtube.com/embed/o2KJoAhEGg8" frameborder="0" allowfullscreen></iframe>
+				-->
+				<div class='embed-container'><iframe src='https://www.youtube.com/embed/GjBWyvFFOPw' frameborder='0' allowfullscreen></iframe></div>
+			</div>
+		</div>
+	</section>
+	<section id="abstract">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" id="top">
+				<h3>Abstract</h3>
+				<p>We present <a href="http://dancasas.github.io/projects/SoftSMPL">SoftSMPL</a>, a learning-based method to model realistic soft-tissue dynamics as a function of body shape and motion. Datasets to learn such task are scarce and expensive to generate, which makes training models prone to overfitting. At the core of our method there are three key contributions that enable us to model highly realistic dynamics and better generalization capabilities than state-of-the-art methods, while training on the same data. First, a novel motion descriptor that disentangles the standard pose representation by removing subject-specific features; second, a neural-network-based recurrent regressor that generalizes to unseen shapes and motions; and third, a highly efficient nonlinear deformation subspace capable of representing soft-tissue deformations of arbitrary shapes. We demonstrate qualitative and quantitative improvements over existing methods and, additionally, we show the robustness of our method on a variety of motion capture databases.</p>
+			</div>
+		</div>
+	</section>
+	<section id="files">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Files</h3>
+				
+				<ul>
+					<li class="grid">
+						<div class="griditem">
+							<a href="http://dancasas.github.io/docs/santesteban_Eurographics2020.pdf" target="_blank" class="imageLink"><img src="contents/santesteban_EG2020_thumb.jpg"></a>
+							<p><a href="http://dancasas.github.io/docs/santesteban_Eurographics2020.pdf" target="_blank">Paper (4MB)</a></p><br>
+				  	</div>
+					</li>
+					<!--
+					<li class="grid">
+						<div class="griditem">
+							<a href="contents/santesteban_EG2020_presentation.pdf" target="_blank" class="imageLink"><img src="contents/santesteban_EG2019_presentation_thumb.jpg"></a>
+							<p><a href="contents/santesteban_EG2019_presentation.pdf" target="_blank" >Presentation (4MB)</a></p><br>
+						</div>
+						<br>
+					</li>
+					-->
+					<!--
+					<li class="grid">
+						<div class="griditem">
+							<a href="contents/santesteban_EG2019_poster.pdf" target="_blank" class="imageLink"><img src="contents/santesteban_EG2019_poster_thumb.jpg"></a>
+							<p><a href="contents/santesteban_EG2019_poster.pdf" target="_blank" >Poster (2MB)</a></p><br>
+						</div>
+						<br>
+					</li>
+					-->
+				</ul>
+				<br>
+			</div>
+		</div>
+	</section>
+<br/>
+	<section id="bibtex">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Citation</h3>
+				<pre>@article {santesteban2019softsmpl,
+    journal = {Computer Graphics Forum (Proc. Eurographics)},
+    title = {{SoftSMPL: Data-driven Modeling of Nonlinear Soft-tissue Dynamics for Parametric Humans}},
+    author = {Santesteban, Igor and Garces, Elena and Otaduy, Miguel A. and Casas, Dan},
+    year = {2020}
+}</pre>
+				   
+			</div>
+		</div>
+	</section>
+	<br>
+	<section id="images">
+        <div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Description and Results</h3>
+				<p>SoftSMPL is a learning-based method to model realistic soft-tissue dynamics as a function of body shape and motion.</p>
+				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/trimed04.gif">
+				<p>Our method runs at real-time rates, and allows to interactively manipulate the shape of the character while visualizing the regressed dynamics. Notice how the soft tissue deformation changes when the shape parameter is modified.</p>
+				<a href="contents/pipeline.jpg"><img style="width: 100%; max-width: 720px; height: auto;" src="contents/pipeline.jpg"></a>
+				<p>
+					At the core of our method there is a neural network based soft-tissue regressor that outputs per-vertex 3D offsets encoded in a novel and highly efficient nonlinear subspace. Key to our method is the observation that traditional pose representations for human models are entangled with subject and shape specific features. We propose a novel pose descriptor to disentangle the pose space, producing a lower-dimensional representation that keeps the global pose of the actor while removing local features. Additionally, we mitigate dynamic pose features also entangled in the pose vector by a novel motion transfer technique.
+				</p>
+				<p>
+					Below we show the generalization capabilities of our method using MoCap sequences from the CMU dataset for a variety of body shapes. For additional results, check the <a href="https://www.youtube.com/watch?v=GjBWyvFFOPw">supplementary video.</a>
+				</p>
+				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/trimed03.gif">				
+				<br/>
+				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/trimed02.gif">				
+				<br/>
+				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/trimed01.gif">				
+				<br/>
+            </div>
+		</div>
+    </section>
+	<br>
+	<section id="contact">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Contact</h3>
+				Igor Santesteban – igor.santesteban@urjc.es<br>
+				Dan Casas – dan.casas@urjc.es
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<br/><br/><br/>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+<script type="text/javascript">    
+    /* SCROLL ALS LINKS */
+    $('#menu .navbar-left li a, .navbar-brand').bind('click', function(e) {
+        e.preventDefault(); // Deshabilitat la acció per defecte (que és anar al link directament, i aixi hi anem fent scroll molon)
+        $('html,body').animate({scrollTop: $(this.hash).offset().top - 70}, 'slow');                                                         
+    });
+</script>
