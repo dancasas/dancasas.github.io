@@ -1,0 +1,32 @@
+
+/* Display lists in a grid of fixed size. This is useful when lists have associated images. */
+/* Idea from http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/ */
+li.grid
+{
+    width: 100px;
+    height: 100px;
+    /*border: 1px solid #000;*/
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    zoom: 1;
+    *display: inline;
+    _height: 100px;
+    text-align: center;
+}
+/* Formatting for each item in a 2D grid. This is used typically in the downloads section. */
+.griditem
+{
+    font-size: 10pt;
+    text-align: center;
+    display: inline;
+}
+.griditem img
+{
+    text-align: center;
+    height:100px;
+    /*width:100px;*/
+    border: 1px solid #eee;
+    box-shadow: 0px 0px 2px #444444;
+}

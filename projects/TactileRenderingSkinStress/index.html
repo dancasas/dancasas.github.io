@@ -1,0 +1,141 @@
+<!doctype html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64375-4', 'auto');
+  ga('send', 'pageview');
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<head><meta charset="utf-8">
+	<title>Tactile Rendering Based on Skin Stress Optimization (ACM SIGGRAPH 2020)</title>
+	<meta name="title" content="Tactile Rendering Based on Skin Stress Optimization (ACM SIGGRAPH 2020)" />
+	<meta name="description" content="Tactile Rendering Based on Skin Stress Optimization (ACM SIGGRAPH 2020)" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" id="favicon" href="../../favicon.png"> 
+	<meta name="author" content="Dan Casas">
+
+	<meta name="robots" content="noindex" />
+
+	<!-- JAVASCRIPT -->	
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/css.css">
+	<link rel="stylesheet" type="text/css" href="css/project.css" media="screen">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css" />
+
+	<!-- Docs Bootstrap: getbootstrap.com -->
+</head>
+<!-- Els atributs del bodi son per que el menu reflexi el lloc on estas mentre fas scroll. El offset coincideix amb el padding-top del body -->
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+
+<body id="dan" data-spy="scroll" data-target="#menu" data-offset="70">
+	<!-- Les ID son per cada seccio, per que fagi scroll al fer click al menu, vindrien a ser links -->
+	<section id="paper_title">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" id="top">
+				<h2><b>Tactile Rendering Based on Skin Stress Optimization</b></h2>	
+				<h4 style="line-height:1.65;"><a href="http://www.mverschoor.nl/wp/">Mickeal Verschoor</a>, <a href="http://dancasas.github.io" target="_blank" >Dan Casas</a>, and <a href="http://mslab.es/otaduy" target="_blank" >Miguel A. Otaduy</a><br/> 
+				<i>ACM Transactions on Graphics (Proc. of SIGGRAPH)</i>, 2020</h4><br/><br/>
+				<!--
+				<iframe style="display: block; margin: auto;" width="560" height="315" src="https://www.youtube.com/embed/o2KJoAhEGg8" frameborder="0" allowfullscreen></iframe>
+				-->
+				<div class='embed-container'><iframe src='https://www.youtube.com/embed/pVuLgWlNdpQ' frameborder='0' allowfullscreen></iframe></div>
+			</div>
+		</div>
+	</section>
+	<section id="abstract">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" id="top">
+				<h3>Abstract</h3>
+				<p>We present a method to render virtual touch, such that the stimulus produced by a tactile device on a user's skin matches the stimulus computed in a virtual environment simulation. To achieve this, we solve the inverse mapping from skin stimulus to device configuration thanks to a novel optimization algorithm. Within this algorithm, we use a device-skin simulation model to estimate rendered stimuli, we account for trajectory-dependent effects efficiently by decoupling the computation of the friction state from the optimization of device configuration, and we accelerate computations using a neural-network approximation of the device-skin model. Altogether, we enable real-time tactile rendering of rich interactions including smooth rolling, but also contact with edges, or frictional stick-slip motion. We validate our algorithm both qualitatively through user experiments, and quantitatively on a BioTac biomimetic finger sensor.</p>
+			</div>
+		</div>
+	</section>
+	<section id="files">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Files</h3>
+				
+				<ul>
+					<li class="grid">
+						<div class="griditem">
+							<a href="http://dancasas.github.io/docs/verschoor_SIGGRAPH2020.pdf" target="_blank" class="imageLink"><img src="contents/verschoor_SIGGRAPH2020_thumb.jpg"></a>
+							<p><a href="http://dancasas.github.io/docs/verschoor_SIGGRAPH2020.pdf" target="_blank">Paper(9MB)</a></p><br>
+				  	</div>
+					</li>
+				</ul>
+				<br>
+			</div>
+		</div>
+	</section>
+<br/>
+	<section id="bibtex">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Citation</h3>
+				<pre>@article {verschoor2020tactilerendering,
+	author  = {Verschoor, Mickeal and Casas, Dan and Otaduy, Miguel A.},
+	title   = {{Tactile Rendering Based on Skin Stress Optimization}},
+	number  = "4",
+	volume  = "39",
+	journal = {ACM Transactions on Graphics (Proc. of ACM SIGGRAPH)},
+	year    = {2020}
+}</pre>
+				   
+			</div>
+		</div>
+	</section>
+	<br>
+	<section id="images">
+        <div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Description and Results</h3>
+				<p>Our tactile rendering algorithm takes as input a target tactile stimulus, and computes as output a device configuration that produces the best-matching stimulus. Internally, the algorithm staggers the computation of the device configuration and the friction state, to handle efficiently the dependency between the device trajectory and the resulting stimulus. Furthermore, the algorithm leverages various device-skin simulation models to produce computational descriptors of tactile stimulus and friction state.</p>
+				<p>Below we see our tactile rendering method in action. A virtual hand follows the user and interacts with virtual objects. On each frame, we compute the tactile stimulus (i.e., skin stress) in this simulation, and use it to find the tactile device configuration that produces the best-matching stimulus (see insets). Then, we render this device configuration to the user.</p>
+				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/verschoor_clip01_x2.gif">
+				<p>Below we depict an overview of our tactile rendering algorithm. On every frame, we obtain a target stimulus \(\mathbf{\sigma}^{*}\) (i.e., skin stress) from the VE simulation. Using the device configuration \(\mathbf{x}\) from the previous frame, we also compute a friction state \(\mathbf{f}\). Using both as input, we search for the device configuration that produces the best-matching stimulus. This search is formulated as a constrained optimization, which evaluates a data-driven model of skin mechanics on each iteration.
+				</p>
+				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/pipeline.jpg">
+				<p>Our rendering algorithm succeeds to provide key tactile feedback when grasping and lifting objects. In the following example, subtle changes in grasping pose produce smooth device motion</p>
+				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/verschoor_clip02.gif">	<p>We qualitative validation of tactile rendering on a BioTac sensor. We use the BioTac to interact with a set of real objects to obtain a sequence of target tactile stimuli. Then, we run our optimization-based algorithm to compute tactile device configurations that best match those stimuli. We show side-by-side comparisons of the rendered device configuration next to the real-world interaction that generated each target stimulus. We trained the rendering algorithm using only interactions of the BioTac with the tactile device, yet it succeeds to produce plausible renderings for unseen situations, such as contact with edges or deformable objects</p>	
+				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/verschoor_clip03.gif">	
+				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/verschoor_clip04.gif">
+				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/verschoor_clip05.gif">			
+            </div>
+		</div>
+    </section>
+	<br>
+	<section id="contact">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Contact</h3>
+				Miguel A. Otaduy – miguel.otaduy@urjc.es
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<br/><br/><br/>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+<script type="text/javascript">    
+    /* SCROLL ALS LINKS */
+    $('#menu .navbar-left li a, .navbar-brand').bind('click', function(e) {
+        e.preventDefault(); // Deshabilitat la acció per defecte (que és anar al link directament, i aixi hi anem fent scroll molon)
+        $('html,body').animate({scrollTop: $(this.hash).offset().top - 70}, 'slow');                                                         
+    });
+</script>
