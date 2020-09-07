@@ -112,31 +112,46 @@
         <div class="container-fluid">
 			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 				<h3>Description and Results</h3>
-				<p>SoftSMPL is a learning-based method to model realistic soft-tissue dynamics as a function of body shape and motion.</p>
+				<p>Our goal is to predict the accurate 3D draping of garments, worn by any body shape, for virtual try-on purposes. We put special emphasis on the ability to cope with a large variety of garments, a feature mostly ignored by existing works since it requires a model that can deal with varying topology input. To this end, we propose a fully convolutional graph neural network approach that is able to predict the nonrigid deformations of parametric garments with arbitrary mesh topology.</p> 
+				<p>
+					This is an example 4 of garments fitted into a large range of bodies, deformed with our approach. Notice how the wrinkles naturally match the expected behavior of the garment, and change for each shape-garment pair.
+				</p>
 				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/vidaurre_SCA2020_clip01_x4.gif">
-				<p>Our method runs at real-time rates, and allows to interactively manipulate the shape of the character while visualizing the regressed dynamics. Notice how the soft tissue deformation changes when the shape parameter is modified.</p>
+				<p>
+					Under the hood, our novel geometric deep learning approach learns to drape 3D garments by decoupling the three different sources of deformations that condition the fit of clothing: garment type, target body shape, and material.
+				</p>
 				<a href="contents/pipeline.jpg"><img style="width: 100%; max-width: 720px; height: auto;" src="contents/pipeline.jpg"></a>
 				<p>
-					At the core of our method there is a neural network based soft-tissue regressor that outputs per-vertex 3D offsets encoded in a novel and highly efficient nonlinear subspace. Key to our method is the observation that traditional pose representations for human models are entangled with subject and shape specific features. We propose a novel pose descriptor to disentangle the pose space, producing a lower-dimensional representation that keeps the global pose of the actor while removing local features. Additionally, we mitigate dynamic pose features also entangled in the pose vector by a novel motion transfer technique.
+					The regressor <i>R</i><sub>mean</sub> estimates the 3D mesh of the designed garment fitted into a mean body shape. Then, after a mesh topology optimization step to generate the optimal topology for the designed garment, regressors <i>R</i><sub>smooth</sub> and <i>R</i><sub>fine</sub> deform the mesh to reproduce deformations caused by the target body shape and material. Importantly, these regressors are implemented in a novel fully convolutional graph neural network (FCGNN) that is able to cope with any combination of garment, topology, and target body. Below we depict the architecture of <i>R</i><sub>smooth</sub> and <i>R</i><sub>fine</sub>, based on a U-Net and graph convolutions. 
 				</p>
+				<a href="contents/networks.jpg"><img style="width: 100%; max-width: 720px; height: auto;" src="contents/networks.jpg"></a>
 				<p>
-					Below we show the generalization capabilities of our method using MoCap sequences from the CMU dataset for a variety of body shapes. For additional results, check the <a href="https://www.youtube.com/watch?v=GjBWyvFFOPw">supplementary video.</a>
+					Below we show a variety of our results visualized from an orbital camera.
 				</p>
 				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/vidaurre_SCA2020_clip02_x2.gif">				
 				<br/>
-				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/trimed02.gif">				
-				<br/>
-				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/trimed01.gif">				
+				<p>
+					Our method is highly efficient and can be used in design applications where fast feedback is required. Below we show our  tool that allows to interactively manipulate the design parameters of the garment, and quickly visualize the fit onto arbitrary target bodies.
+				</p>
+				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/vidaurre_clip03_merged.gif">				
 				<br/>
             </div>
 		</div>
-    </section>
+	</section>
+	<br>
+	<section id="Acknowledgments">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Acknowledgments</h3>
+				Igor Santesteban was supported by the Predoctoral Training Programme of the Department of Education of the Basque Government (PRE_2019_2_0104), and Elena Garces was supported by a Torres Quevedo Fellowship (PTQ2018-009868). The work was also funded in part by the Spanish Ministry of Science (project RTI2018-098694-B-I00 VizLearning).
+			</div>
+		</div>
+	</section>
 	<br>
 	<section id="contact">
 		<div class="container-fluid">
 			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 				<h3>Contact</h3>
-				Igor Santesteban – igor.santesteban@urjc.es<br>
 				Dan Casas – dan.casas@urjc.es
 			</div>
 		</div>
