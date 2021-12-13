@@ -89,6 +89,21 @@ table, table tr {
     opacity: 0.75;
 }
 
+.nav-social-large-tw {
+    margin-left: 5px;
+    padding-top: 5px;
+    width: 35px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+}
+
+.nav-social-large-tw:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
 .nav-social-large:hover {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
