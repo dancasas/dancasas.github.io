@@ -171,10 +171,18 @@ table, table tr {
 		margin-left: -10px;
 	}
 
+	/*
 	.social-icons img {
 		margin-top: 0px;
 		margin-bottom: 15px;
 		width: 150px;
+	}
+	*/
+
+	.nav-social-large-tw {
+		margin-left: 5px;
+		padding-top: 5px;
+		width: 35px;
 	}
 }
 /* FI NAVBAR */
