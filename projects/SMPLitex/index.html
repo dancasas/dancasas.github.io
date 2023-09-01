@@ -48,7 +48,7 @@
 				<!--
 				<iframe style="display: block; margin: auto;" width="560" height="315" src="https://www.youtube.com/embed/o2KJoAhEGg8" frameborder="0" allowfullscreen></iframe>
 				-->
-				<div class='embed-container'><iframe src='https://www.youtube.com/embed/f01Z2H5dG-g' frameborder='0' allowfullscreen></iframe></div>
+				<div class='embed-container'><iframe src='https://www.youtube.com/embed/_rNrDOE7o7U' frameborder='0' allowfullscreen></iframe></div>
 			</div>
 		</div>
 	</section>
@@ -96,31 +96,14 @@
         <div class="container-fluid">
 			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 				<h3>Description and Results</h3>
-				<p>Our goal is to predict the accurate 3D draping of garments, worn by any body shape, for virtual try-on purposes. We put special emphasis on the ability to cope with a large variety of garments, a feature mostly ignored by existing works since it requires a model that can deal with varying topology input. To this end, we propose a fully convolutional graph neural network approach that is able to predict the nonrigid deformations of parametric garments with arbitrary mesh topology.</p> 
 				<p>
-					This is an example of 4 garments fitted into a large range of bodies, deformed with our approach. Notice how the wrinkles naturally match the expected behavior of the garment, and change for each shape-garment pair.
+					From a single image where a human is partly visible, SMPLitex automatically estimates a complete 3D texture map that can be applied to SMPL body mesh sequences.
 				</p>
 				<video style="width: 100%; max-width: 1080px; height: auto; filter: brightness(1.0);" autoplay loop muted playsinline>
 					<source src="contents/BMVC-2023-cut-01_speed_enc.mp4" type="video/mp4">
 				</video>
 				<p>
-					Under the hood, our novel geometric deep learning approach learns to drape 3D garments by decoupling the three different sources of deformations that condition the fit of clothing: garment type, target body shape, and material.
-				</p>
-				<a href="contents/pipeline.jpg"><img style="width: 100%; max-width: 720px; height: auto;" src="contents/pipeline.jpg"></a>
-				<p>
-					The regressor <i>R</i><sub>mean</sub> estimates the 3D mesh of the designed garment fitted into a mean body shape. Then, after a mesh topology optimization step to generate the optimal topology for the designed garment, regressors <i>R</i><sub>smooth</sub> and <i>R</i><sub>fine</sub> deform the mesh to reproduce deformations caused by the target body shape and material. Importantly, these regressors are implemented in a novel fully convolutional graph neural network (FCGNN) that is able to cope with any combination of garment, topology, and target body. Below we depict the architecture of <i>R</i><sub>smooth</sub> and <i>R</i><sub>fine</sub>, based on a U-Net and graph convolutions. 
-				</p>
-				<a href="contents/networks.jpg"><img style="width: 100%; max-width: 720px; height: auto;" src="contents/networks.jpg"></a>
-				<p>
-					Below we show a variety of our results visualized from an orbital camera.
-				</p>
-				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/vidaurre_SCA2020_clip02_x2.gif">				
-				<br/>
-				<p>
-					Our method is highly efficient and can be used in design applications where fast feedback is required. Below we show our  tool that allows to interactively manipulate the design parameters of the garment, and quickly visualize the fit onto arbitrary target bodies.
-				</p>
-				<img style="width: 100%; max-width: 720px; height: auto;" src="contents/vidaurre_clip03_merged.gif">				
-				<br/>
+					Under the hood, SMPLitex leverages a fine-tuned latent diffusion model (LDM) trained to generate texturemaps for photorealistic SMPL avatars. Our key intuition is that to enable the estimation of 3D human appearance from a single image, we can <i>condition</i> the synthesis of an LDM model for human appearance to <i>the visible parts of the subject</i> in the input image.
             </div>
 		</div>
 	</section>
