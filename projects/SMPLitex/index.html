@@ -67,9 +67,15 @@
 				<ul>
 					<li class="grid">
 						<div class="griditem">
-							<a href="contents/vidaurre_SCA2020.pdf" target="_blank" class="imageLink"><img src="contents/vidaurre_SCA2020_thumb.jpg"></a>
-							<p><a href="contents/vidaurre_SCA2020.pdf" target="_blank">Paper(10MB)</a></p><br>
-				  	</div>
+							<a href="contents/casas_BMVC2023.pdf" target="_blank" class="imageLink"><img src="contents/casas_BMVC23_thumb.jpg"></a>
+							<p><a href="contents/casas_BMVC2023.pdf" target="_blank">Paper</a></p><br>
+				  		</div>
+					</li>
+					<li class="grid">
+						<div class="griditem">
+							<a href="#" target="_blank" class="imageLink"><img src="contents/icons8-dataset-100.png"></a>
+							<p><a href="#" target="_blank">Dataset (soon)</a></p><br>
+				  		</div>
 					</li>
 				</ul>
 				<br>
@@ -104,7 +110,10 @@
 					<source src="contents/BMVC-2023-cut-02_enc.mp4" type="video/mp4">
 				</video>
 				<p>
-					Under the hood, SMPLitex leverages a fine-tuned latent diffusion model (LDM) trained to generate texturemaps for photorealistic SMPL avatars. Our key intuition is that to enable the estimation of 3D human appearance from a single image, we can <i>condition</i> the synthesis of an LDM model for human appearance to <i>the visible parts of the subject</i> in the input image.
+					Under the hood, SMPLitex leverages a fine-tuned latent diffusion model (LDM) trained to generate texturemaps for photorealistic SMPL avatars. Our key intuition is that, to enable the estimation of 3D human appearance from a single image, we can <i>condition</i> the synthesis of an LDM for human appearance to <i>the visible parts of the subject</i> in the input image.
+				</p>
+				<p>
+					To this end, given an input image, we estimate pixel-to-surface correspondences and project the pixels of input image with assigned surface correspondences to a partial UV map. We then use the partial UV map as a conditional signal to sample a fine-tunned diffusion model for human texturemaps.
 				</p>
 				<!--
 				<video style="width: 100%; max-width: 1080px; height: auto; filter: brightness(1.0);" autoplay loop muted playsinline>
@@ -112,12 +121,19 @@
 				</video>
 				-->
 				<h3>Results</h3>
+				<p>
+					Here we show results using input images from the DeepFashion-MultiModal dataset. Each triplet shows: input image, estimated texturemap, and 3D render.
+				</p>
 				<video style="width: 100%; max-width: 1080px; height: auto; filter: brightness(1.0);" autoplay loop muted playsinline>
-					<source src="contents/BMVC-2023-cut-05.mp4" type="video/mp4">
+					<source src="contents/BMVC-2023-cut-05-labels_enc.mp4" type="video/mp4">
 				</video>
 				<br/>
 				<br/>
+				<br/>
 				<h3>SMPLitex samples</h3>
+				<p>
+					SMPLitex, our generative model used to estimate human textures from images, can also be sampled by text prompts. We leverage this capability to build a dataset of high-quality textures by simply sampling the latent space. Below we showcase a few of the SMPLitex samples. Notice that none of these were used to fine-tune SMPLitex.
+				</p>
 				<video style="width: 100%; max-width: 1080px; height: auto; filter: brightness(1.0);" autoplay loop muted playsinline>
 					<source src="contents/SMPLitex-dataset-large-01_enc.mp4" type="video/mp4">
 				</video>
@@ -136,13 +152,14 @@
 				<video style="width: 100%; max-width: 1080px; height: auto; filter: brightness(1.0);" autoplay loop muted playsinline>
 					<source src="contents/SMPLitex-dataset-large-06_enc.mp4" type="video/mp4">
 				</video>
-
+				<br/><br/>
 				<h3>Comparison with state-of-the-art</h3>
+				<p>
+					Below we qualitative compare SMPLitex to the state-of-the-art methods for texture map estimation from single image. SMPLitex outputs higher quality textures, including face details and garment wrinkles. See <a href="contents/casas_BMVC2023.pdf">main paper</a> for quantitative analysis.
+				</p>
 				<video style="width: 100%; max-width: 1080px; height: auto; filter: brightness(1.0);" autoplay loop muted playsinline>
 					<source src="contents/BMVC-2023-comp_03_enc.mp4" type="video/mp4">
 				</video>
-
-			
             </div>
 		</div>
 	</section>
@@ -151,7 +168,7 @@
 		<div class="container-fluid">
 			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 				<h3>Acknowledgments</h3>
-				
+				This project has received funding from the European Union’s Horizon 2020 research and innovation program under grant agreement No 899739 (H2020-FETOPEN-2018-2020 CrowdDNA project).
 			</div>
 		</div>
 	</section>
