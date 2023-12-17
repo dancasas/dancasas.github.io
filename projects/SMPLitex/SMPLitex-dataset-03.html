@@ -1,0 +1,375 @@
+<!doctype html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64375-4', 'auto');
+  ga('send', 'pageview');
+</script>
+<head><meta charset="utf-8">
+	<title>SMPLitex: A Generative Model and Dataset for 3D Human Texture Estimation from Single Image
+		(BMVC 2023)</title>
+	<meta name="title" content="SMPLitex: A Generative Model and Dataset for 3D Human Texture Estimation from Single Image" />
+	<meta name="description" content="SMPLitex: A Generative Model and Dataset for 3D Human Texture Estimation from Single Image" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" id="favicon" href="../../favicon.png"> 
+	<meta name="author" content="Dan Casas">
+
+	<!-- JAVASCRIPT -->	
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/css.css">
+	<link rel="stylesheet" type="text/css" href="css/project.css" media="screen">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css" />
+
+	<!-- Docs Bootstrap: getbootstrap.com -->
+</head>
+<!-- Els atributs del bodi son per que el menu reflexi el lloc on estas mentre fas scroll. El offset coincideix amb el padding-top del body -->
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+
+<body id="dan" data-spy="scroll" data-target="#menu" data-offset="70">
+	
+		<!-- MENU SUPERIOR -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+					<!-- navbar-header es pel nom de la web (Dan Casas) i el menu per mobil -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myModal">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#dan">SMPLitex</a>
+					</div>
+					<!-- La classe collapse es per convertir el menu en el boto per mobil -->
+					<div class="collapse navbar-collapse" id="myModal">
+						<ul class="nav navbar-nav navbar-left">
+							<li><a href="./index.html">Project</a></li>
+							<li><a href="./SMPLitex-dataset.html">Dataset</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	<!-- Les ID son per cada seccio, per que fagi scroll al fer click al menu, vindrien a ser links -->
+	<section id="paper_title">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" id="top">
+				<h2><b>SMPLitex: A Generative Model and Dataset for 3D Human Texture Estimation from Single Image</b></h2>	
+				<h4 style="line-height:1.65;"><a href="http://dancasas.github.io" target="_blank" >Dan Casas</a> and Marc Comino-Trinidad<br/>
+				<i>British Machine Vision Conference (BMVC)</i>, 2023</h4><br/><br/>
+
+			</div>
+		</div>
+	</section>
+	<section id="images">
+        <div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>SMPLitex Dataset</h3>
+				<p>
+					SMPLitex enables the synthesis of textures for SMPL model. For those interested in just accessing to a large number of textures, we have created a curated dataset of SMPL textures generated with SMPLitex. You can donwload the full dataset here or browse and download individual textures below.
+				</p>
+				<p>
+					Please note that is dataset is under construction and growing. Feel free to send your best SMPLitex samples or any SMPL textures and we will add it into the dataset. 
+				</p>
+				<p>
+					<span class="btn-group btn-group">
+						<a class="btn btn-success" href="./SMPLitex-dataset.html">1</a>
+						<a class="btn btn-success" href="./SMPLitex-dataset-02.html">2</a>
+						<a class="btn btn-warning" href="#">3</a>
+                        <a class="btn btn-success" href="./SMPLitex-dataset-04.html">4</a>
+                        <a class="btn btn-success" href="./SMPLitex-dataset-05.html">5</a>
+					</span>
+				</p>
+				<table>
+					<tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00100.png">SMPLitex-texture-00100</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00101.png">SMPLitex-texture-00101</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00100.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00100.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00101.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00101.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00102.png">SMPLitex-texture-00102</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00103.png">SMPLitex-texture-00103</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00102.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00102.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00103.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00103.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00104.png">SMPLitex-texture-00104</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00105.png">SMPLitex-texture-00105</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00104.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00104.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00105.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00105.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00106.png">SMPLitex-texture-00106</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00107.png">SMPLitex-texture-00107</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00106.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00106.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00107.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00107.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00108.png">SMPLitex-texture-00108</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00109.png">SMPLitex-texture-00109</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00108.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00108.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00109.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00109.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00110.png">SMPLitex-texture-00110</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00111.png">SMPLitex-texture-00111</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00110.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00110.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00111.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00111.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00112.png">SMPLitex-texture-00112</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00113.png">SMPLitex-texture-00113</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00112.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00112.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00113.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00113.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00114.png">SMPLitex-texture-00114</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00115.png">SMPLitex-texture-00115</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00114.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00114.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00115.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00115.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00116.png">SMPLitex-texture-00116</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00117.png">SMPLitex-texture-00117</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00116.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00116.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00117.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00117.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00118.png">SMPLitex-texture-00118</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00119.png">SMPLitex-texture-00119</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00118.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00118.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00119.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00119.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00120.png">SMPLitex-texture-00120</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00121.png">SMPLitex-texture-00121</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00120.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00120.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00121.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00121.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00122.png">SMPLitex-texture-00122</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00123.png">SMPLitex-texture-00123</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00122.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00122.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00123.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00123.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00124.png">SMPLitex-texture-00124</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00125.png">SMPLitex-texture-00125</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00124.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00124.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00125.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00125.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00126.png">SMPLitex-texture-00126</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00127.png">SMPLitex-texture-00127</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00126.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00126.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00127.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00127.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00128.png">SMPLitex-texture-00128</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00129.png">SMPLitex-texture-00129</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00128.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00128.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00129.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00129.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00130.png">SMPLitex-texture-00130</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00131.png">SMPLitex-texture-00131</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00130.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00130.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00131.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00131.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00132.png">SMPLitex-texture-00132</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00133.png">SMPLitex-texture-00133</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00132.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00132.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00133.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00133.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00134.png">SMPLitex-texture-00134</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00135.png">SMPLitex-texture-00135</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00134.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00134.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00135.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00135.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00136.png">SMPLitex-texture-00136</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00137.png">SMPLitex-texture-00137</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00136.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00136.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00137.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00137.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00138.png">SMPLitex-texture-00138</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00139.png">SMPLitex-texture-00139</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00138.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00138.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00139.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00139.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00140.png">SMPLitex-texture-00140</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00141.png">SMPLitex-texture-00141</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00140.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00140.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00141.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00141.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00142.png">SMPLitex-texture-00142</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00143.png">SMPLitex-texture-00143</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00142.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00142.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00143.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00143.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00144.png">SMPLitex-texture-00144</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00145.png">SMPLitex-texture-00145</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00144.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00144.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00145.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00145.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00146.png">SMPLitex-texture-00146</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00147.png">SMPLitex-texture-00147</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00146.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00146.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00147.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00147.gif" alt="2" width = 100%></td>
+					  </tr><tr>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00148.png">SMPLitex-texture-00148</a></td>
+						<td colspan="2" align="center"><a href="./SMPLitex-dataset/textures/SMPLitex-texture-00149.png">SMPLitex-texture-00149</a></td>
+					  </tr>
+					  <tr>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00148.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00148.gif" alt="2" width = 100%></td>
+						<td> <img src="./SMPLitex-dataset/textures/SMPLitex-texture-00149.png"  alt="1" width = 100%></td>
+						<td><img src="./SMPLitex-dataset/360-gifs/SMPLitex-texture-00149.gif" alt="2" width = 100%></td>
+					  </tr>
+					
+				  </table>
+				  <p>
+					<span class="btn-group btn-group">
+						<a class="btn btn-success" href="./SMPLitex-dataset.html">1</a>
+						<a class="btn btn-success" href="./SMPLitex-dataset-02.html">2</a>
+						<a class="btn btn-warning" href="#">3</a>
+                        <a class="btn btn-success" href="./SMPLitex-dataset-04.html">4</a>
+                        <a class="btn btn-success" href="./SMPLitex-dataset-05.html">5</a>
+					</span>
+				</p>
+            </div>
+		</div>
+	</section>
+	<br/>
+	<section id="bibtex">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Citation</h3>
+				<pre>@inproceedings {casas2023smplitex,
+    title = {{SMPLitex: A Generative Model and Dataset for 3D Human Texture Estimation from Single Image}},
+    author = {Casas, Dan and Comino-Trinidad, Marc},
+    booktitle = {British Machine Vision Conference (BMVC)},
+    year = {2023}
+}</pre>
+				   
+			</div>
+		</div>
+	</section>
+	<br>
+
+	<br>
+	<section id="contact">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Contact</h3>
+				Dan Casas – dan.casas@urjc.es
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<br/><br/><br/>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+<script type="text/javascript">    
+    /* SCROLL ALS LINKS */
+    $('#menu .navbar-left li a, .navbar-brand').bind('click', function(e) {
+        e.preventDefault(); // Deshabilitat la acció per defecte (que és anar al link directament, i aixi hi anem fent scroll molon)
+        $('html,body').animate({scrollTop: $(this.hash).offset().top - 70}, 'slow');                                                         
+    });
+</script>

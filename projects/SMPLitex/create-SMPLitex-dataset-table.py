@@ -1,8 +1,8 @@
 base_url = "./SMPLitex-dataset/textures/"
 base_gif_url = "./SMPLitex-dataset/360-gifs/"
 
-start_image = 0
-end_image = 100  # Replace with the desired end image number
+start_image = 150
+end_image = 200  # Replace with the desired end image number
 image_prefix = "SMPLitex-texture-"
 
 # Creating the HTML code
