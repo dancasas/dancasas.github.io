@@ -1,0 +1,173 @@
+<!doctype html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64375-4', 'auto');
+  ga('send', 'pageview');
+</script>
+<head><meta charset="utf-8">
+	<title>Resolving Collisions in Dense 3D Crowd Animations</title>
+	<meta name="title" content="Resolving Collisions in Dense 3D Crowd Animations" />
+	<meta name="description" content="Resolving Collisions in Dense 3D Crowd Animations" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" id="favicon" href="../../favicon.png"> 
+	<meta name="author" content="Dan Casas">
+	<meta name="robots" content="noindex">
+
+	<!-- JAVASCRIPT -->	
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/css.css">
+	<link rel="stylesheet" type="text/css" href="css/project.css" media="screen">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css" />
+
+	<!-- Docs Bootstrap: getbootstrap.com -->
+</head>
+<!-- Els atributs del bodi son per que el menu reflexi el lloc on estas mentre fas scroll. El offset coincideix amb el padding-top del body -->
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+
+<body id="dan" data-spy="scroll" data-target="#menu" data-offset="70">
+	<!-- Les ID son per cada seccio, per que fagi scroll al fer click al menu, vindrien a ser links -->
+	<section id="paper_title">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" id="top">
+				<h2><b>Resolving Collisions in Dense 3D Crowd Animations</b></h2>	
+				<h4 style="line-height:1.65;">Gonzalo Gomez-Nogales*,
+					Melania Prieto-Martin*,
+					<a href="https://crisrom002.gitlab.io">Cristian Romero</a>,
+					M. Comino-Trinidad,
+					Pablo Ramon,
+					Anne-Hélène Olivier,
+					<a href="https://people.rennes.inria.fr/Ludovic.Hoyet/">Ludovic Hoyet</a>,
+					<a href="https://mslab.es/otaduy/" target="_blank">Miguel A. Otaduy</a>,
+					Julien Pettre,
+					and <a href="https://dancasas.github.io/" target="_blank"> Dan Casas</a><br/><br/>
+				<i>ACM Transactions on Graphics</i> (to be presented at SIGGRAPH Asia), 2024</h4><br/><br/>
+				<!--
+				<iframe style="display: block; margin: auto;" width="560" height="315" src="https://www.youtube.com/embed/o2KJoAhEGg8" frameborder="0" allowfullscreen></iframe>
+				-->
+				<div class='embed-container'><iframe src='https://www.youtube.com/embed/gP8FFeKRqx0' frameborder='0' allowfullscreen></iframe></div>
+			</div>
+		</div>
+	</section>
+	<section id="abstract">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" id="top">
+				<h3>Abstract</h3>
+				<p>We propose a novel contact-aware method to synthesize highly-dense 3D crowds of animated characters. Existing methods animate crowds by, first, computing the 2D global motion approximating subjects as 2D particles and, then, introducing individual character motions without considering their surroundings. This creates the illusion of a 3D crowd, but, with density, characters frequently intersect each other since character-to-character contact is not modeled. We tackle this issue and propose a general method that considers any crowd animation and resolves existing residual collisions. To this end, we take a physics-based approach to model contacts between articulated characters. This enables the real-time synthesis of 3D high-density crowds with dozens of individuals that do not intersect each other, producing an unprecedented level of physical correctness in animations. Under the hood, we model each individual using a parametric human body incorporating a set of 3D proxies to approximate their volume.We then build a large system of articulated rigid bodies, and use an efficient physics-based approach to solve for individual body poses that do not collide with each other while maintaining the overall motion of the crowd. We first validate our approach objectively and quantitatively. We then explore relations between physical correctness and perceived realism based on an extensive user study that evaluates the relevance of solving contacts in dense crowds. Results demonstrate that our approach outperforms existing methods for crowd animation in terms of geometric accuracy and overall realism.</p>
+			</div>
+		</div>
+	</section>
+	<section id="files">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Files</h3>
+				
+				<ul>
+					<li class="grid">
+						<div class="griditem">
+							<a href="https://dancasas.github.io/docs/gomez-nogales_TOG2024.pdf" target="_blank" class="imageLink"><img src="contents/gomez-nogales_TOG2024_thumb.jpg"></a>
+							<p><a href="https://dancasas.github.io/docs/gomez-nogales_TOG2024.pdf" target="_blank">Paper (7MB)</a></p><br>
+				  	</div>
+					</li>
+					<!--
+					<li class="grid">
+						<div class="griditem">
+							<a href="contents/santesteban_EG2020_presentation.pdf" target="_blank" class="imageLink"><img src="contents/santesteban_EG2019_presentation_thumb.jpg"></a>
+							<p><a href="contents/santesteban_EG2019_presentation.pdf" target="_blank" >Presentation (4MB)</a></p><br>
+						</div>
+						<br>
+					</li>
+					-->
+					<!--
+					<li class="grid">
+						<div class="griditem">
+							<a href="contents/santesteban_EG2019_poster.pdf" target="_blank" class="imageLink"><img src="contents/santesteban_EG2019_poster_thumb.jpg"></a>
+							<p><a href="contents/santesteban_EG2019_poster.pdf" target="_blank" >Poster (2MB)</a></p><br>
+						</div>
+						<br>
+					</li>
+					-->
+				</ul>
+				<br>
+			</div>
+		</div>
+	</section>
+<br/>
+	<section id="bibtex">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Citation</h3>
+				<pre>@article{resolvingcollisions2024, 
+  author = {Gomez-Nogales, Gonzalo and Prieto-Martin, Melania and Romero, Cristian and Comino-Trinidad, Marc and Ramon-Prieto, Pablo and Olivier, Anne-H\'{e}l\`{e}ne and Hoyet, Ludovic and Otaduy, Miguel and Pettre, Julien and Casas, Dan}, 
+  title = {Resolving Collisions in Dense 3D Crowd Animations}, 
+  year = {2024},
+  doi = {10.1145/3687266}, 
+  journal = {ACM Transactions on Graphics}
+}</pre>
+				   
+			</div>
+		</div>
+	</section>
+	<br>
+	<section id="images">
+        <div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Description and Results</h3>
+				<p>We propose a physics-based method to resolve collisions in highly-dense 3D crowds.</p>
+				<video style="width: 80%; max-width: 1080px; height: auto; display: block;margin: auto;" autoplay loop muted playsinline>
+					<source src="contents/dense_crowd_contact_clip1.mp4" type="video/mp4">
+				</video>
+				
+				<p>To this end, we approximate each individual with a parametric 3D set of volumetric proxies, which allows us to resolive collisions while maintaining the overall motion of the crowd. Resulting animations showcase collision-aware 3D dense crowds while keeping the realism of the input motions.</p>
+				<video style="width: 80%; max-width: 1080px; height: auto; display: block;margin: auto;" autoplay loop muted playsinline>
+					<source src="contents/dense_crowd_contact clip2_no_audio.mp4" type="video/mp4">
+				</video>
+				<br/>
+				<br/>
+				<p>
+					We validate our approach quantitatively (see paper for details) and qualitatively with an exhaustive user study. To this end, we generate an stimuli consisting of crowds of 5 different densities rendered from 4 viewpoints. Participants use a GUI to answer questions about the realism of the crowd for each video of stimuli.
+				</p>
+				<video style="width: 90%; max-width: 1080px; height: auto; display: block;margin: auto;" autoplay loop muted playsinline>
+					<source src="contents/dense crow contact clip3_v2_crf23.mp4" type="video/mp4">
+				</video>		
+				<br/>
+				<p>Extensive analysis of the perceptual study demonstrates that resolving collisions is key to improve the realism of dense 3D crowds.</p>
+				<a href="contents/dense crow contact clip4.png"><img style="width: 90%; max-width: 1080px; height: auto;display: block;margin: auto;" src="contents/dense crow contact clip4.png"></a>
+            </div>
+		</div>
+    </section>
+	<br>
+	<section id="contact">
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<h3>Contact</h3>
+				Dan Casas – dan.casas@urjc.es
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container-fluid">
+			<div class="cos col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<br/><br/><br/>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+<script type="text/javascript">    
+    /* SCROLL ALS LINKS */
+    $('#menu .navbar-left li a, .navbar-brand').bind('click', function(e) {
+        e.preventDefault(); // Deshabilitat la acció per defecte (que és anar al link directament, i aixi hi anem fent scroll molon)
+        $('html,body').animate({scrollTop: $(this.hash).offset().top - 70}, 'slow');                                                         
+    });
+</script>
