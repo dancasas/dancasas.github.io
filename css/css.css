@@ -228,3 +228,12 @@ table, table tr {
 @media (min-width: 1200px) {
 
 }
+
+
+@media (max-width: 768px) {
+	.imgres {
+	  width: 20vw; /* 20% of the viewport width */
+	  height: auto;
+	}
+  }
+  
