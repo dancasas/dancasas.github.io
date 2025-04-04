@@ -232,7 +232,7 @@ table, table tr {
 
 @media (max-width: 768px) {
 	.imgres {
-	  width: 25vw; /* 20% of the viewport width */
+	  width: 28vw; /* 20% of the viewport width */
 	  height: auto;
 	}
   }
